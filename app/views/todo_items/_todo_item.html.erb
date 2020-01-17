@@ -18,6 +18,12 @@
         <p><%= todo_item.content %></p>
       </div>
     <% end %>
+    <p>
+      Tags:
+      <% todo_item.tags.each do |tag| %>
+      <%= link_to tag.name, tag_path(tag) %>
+      <% end %>
+    </p>
   </td>
   <td>
     <div class = "delete-btn">

@@ -1,8 +1,10 @@
 class TodoItemsController < ApplicationController
   before_action :make_todo_list
   before_action :make_todo_item, except: [:create]
+  def new
+  end
   def create
-    @todo_item = @todo_list.todo_items.create(params[:todo_item].permit(:content))
+    @todo_item = @todo_list.todo_items.create(todo_item_params)
     redirect_to @todo_list
   end
   def destroy
@@ -25,6 +27,9 @@ class TodoItemsController < ApplicationController
   end
 
   private
+    def todo_item_params
+      params[:todo_item].permit(:content, :list_of_tags)
+    end
     def make_todo_list
       @todo_list = TodoList.find(params[:todo_list_id])
     end
