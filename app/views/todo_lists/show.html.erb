@@ -1,21 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
+<h1><%= @todo_list.title %></h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @todo_list.description %>
-</p>
+<h3><%= @todo_list.description %></h3>
 
-<div id="todo_items_wrap">
- <%= render @todo_list.todo_items %>
- <div id="form">
+<table>
+  <thead>
+    <tr>
+      <th>Completed</th>
+      <th>Description</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id= "todo_items_wrap">
+      <%= render @todo_list.todo_items %>
+    </div>
+  </tbody>
+</table>
+
+<div id="form">
   <%= render "todo_items/form" %>
- </div>
 </div>
+
 
 <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
 <%= link_to 'Back', todo_lists_path %>
