@@ -54,11 +54,13 @@ class TodoListsController < ApplicationController
   # DELETE /todo_lists/1
   # DELETE /todo_lists/1.json
   def destroy
-    @todo_list.destroy
-    respond_to do |format|
-      format.html { redirect_to todo_lists_url, notice: 'Todo list was successfully destroyed.' }
-      format.json { head :no_content }
+    flash = {success: "You have deleted the todo list", error: "The todo list could not be deleted" }
+    if @todo_list.destroy
+      flash[:success]
+    else
+      flash[:error]
     end
+    redirect_to todo_lists_url
   end
 
   private
