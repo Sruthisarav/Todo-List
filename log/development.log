@@ -2860,3 +2860,262 @@ Processing by TodoListsController#show as HTML
 Completed 200 OK in 156ms (Views: 146.1ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/todo_lists/1" for ::1 at 2020-01-17 21:39:38 +0800
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.7ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:69
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (2.5ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/show.html.erb:18
+  [1m[36mTag Load (4.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."todo_item_id" = ?[0m  [["todo_item_id", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:23
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."todo_item_id" = ?[0m  [["todo_item_id", 4]]
+  ↳ app/views/todo_items/_todo_item.html.erb:23
+  Rendered collection of todo_items/_todo_item.html.erb [2 times] (59.1ms)
+  Rendered todo_items/_new.html.erb (32.3ms)
+  Rendered todo_lists/show.html.erb within layouts/application (165.7ms)
+Completed 200 OK in 1662ms (Views: 1597.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/tags/1" for ::1 at 2020-01-17 21:39:43 +0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (3.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:4
+  Rendered tags/show.html.erb within layouts/application (26.1ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<TodoItem:0x00007f9ca88386e0>):
+    2: 
+    3: <ul>
+    4:   <% @tag.todo_items.each do |todo_item| %>
+    5:     <li><%= link_to todo_item.title, 
+    6:       todo_list_todo_item_path(@todo_list, todo_item.id) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/tags/show.html.erb:5:in `block in _app_views_tags_show_html_erb___2111467263577228887_70155405953220'
+app/views/tags/show.html.erb:4:in `_app_views_tags_show_html_erb___2111467263577228887_70155405953220'
+Started GET "/tags/1" for ::1 at 2020-01-17 21:40:34 +0800
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (2.5ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:4
+  Rendered tags/show.html.erb within layouts/application (110.0ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 6.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"todo_items", :id=>"1", :todo_list_id=>nil}, missing required keys: [:todo_list_id]):
+    3: <ul>
+    4:   <% @tag.todo_items.each do |todo_item| %>
+    5:     <li><%= link_to todo_item.content, 
+    6:       todo_list_todo_item_path(@todo_list, todo_item.id) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/tags/show.html.erb:6:in `block in _app_views_tags_show_html_erb__4196146103608116449_70137427048720'
+app/views/tags/show.html.erb:4:in `_app_views_tags_show_html_erb__4196146103608116449_70137427048720'
+Started GET "/tags/1" for ::1 at 2020-01-17 21:41:49 +0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:4
+  Rendered tags/show.html.erb within layouts/application (843.4ms)
+Completed 500 Internal Server Error in 885ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `todo_list' for #<#<Class:0x00007f9448d96348>:0x00007f944a6f1ae0>
+Did you mean?  todo_list_url):
+    3: <ul>
+    4:   <% @tag.todo_items.each do |todo_item| %>
+    5:     <li><%= link_to todo_item.content, 
+    6:       todo_list_todo_item_path(todo_list.id, todo_item.id) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/tags/show.html.erb:6:in `block in _app_views_tags_show_html_erb__4196146103608116449_70137440342800'
+app/views/tags/show.html.erb:4:in `_app_views_tags_show_html_erb__4196146103608116449_70137440342800'
+Started GET "/tags/1" for ::1 at 2020-01-17 21:42:02 +0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (2.5ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:4
+  Rendered tags/show.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"todo_items", :id=>"1", :todo_list_id=>nil}, missing required keys: [:todo_list_id]):
+    3: <ul>
+    4:   <% @tag.todo_items.each do |todo_item| %>
+    5:     <li><%= link_to todo_item.content, 
+    6:       todo_list_todo_item_path(@todo_list, todo_item.id) %></li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/tags/show.html.erb:6:in `block in _app_views_tags_show_html_erb__4196146103608116449_70137428641740'
+app/views/tags/show.html.erb:4:in `_app_views_tags_show_html_erb__4196146103608116449_70137428641740'
+Started GET "/tags/1" for ::1 at 2020-01-18 00:31:59 +0800
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (2.9ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (2.6ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:14
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (7.7ms)
+  Rendered tags/show.html.erb within layouts/application (122.2ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 7.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"complete", :controller=>"todo_items", :id=>"1", :todo_list_id=>nil}, missing required keys: [:todo_list_id]):
+    2:   <td>
+    3:     <div class = "complete-btn">
+    4:       <%= link_to link_to "Completed",
+    5:         complete_todo_list_todo_item_path(@todo_list, todo_item.id), 
+    6:         method: :patch %>
+    7:     </div>
+    8:   </td>
+  
+app/views/todo_items/_todo_item.html.erb:5:in `_app_views_todo_items__todo_item_html_erb__2363448359112584968_70363954468360'
+app/views/tags/show.html.erb:14:in `_app_views_tags_show_html_erb__341239236254662700_70363932068940'
+Started GET "/tags/1" for ::1 at 2020-01-18 00:35:38 +0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (2.9ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:14
+  [1m[36mTodoList Load (2.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:5
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."todo_item_id" = ?[0m  [["todo_item_id", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:23
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (126.7ms)
+  Rendered tags/show.html.erb within layouts/application (140.9ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 8.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"todo_items", :id=>"1", :todo_list_id=>nil}, missing required keys: [:todo_list_id]):
+    28:   <td>
+    29:     <div class = "delete-btn">
+    30:       <%= link_to "Delete", 
+    31:         todo_list_todo_item_path(@todo_list, todo_item.id), 
+    32:         method: :delete, data: { confirm: "Do you want to delete this item?" } %>
+    33:     </div>
+    34:   </td>
+  
+app/views/todo_items/_todo_item.html.erb:31:in `_app_views_todo_items__todo_item_html_erb__2363448359112584968_70363930681200'
+app/views/tags/show.html.erb:14:in `_app_views_tags_show_html_erb__341239236254662700_70363930848220'
+Started GET "/tags/1" for ::1 at 2020-01-18 00:36:03 +0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (2.9ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:14
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:5
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."todo_item_id" = ?[0m  [["todo_item_id", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:23
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (4.9ms)
+  Rendered tags/show.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 1586ms (Views: 1576.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-18 00:36:16 +0800
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (2.5ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.erb:15
+  Rendered todo_lists/index.html.erb within layouts/application (97.4ms)
+Completed 200 OK in 227ms (Views: 196.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-01-18 00:36:18 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:69
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.8ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/show.html.erb:18
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."todo_item_id" = ?[0m  [["todo_item_id", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:23
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."todo_item_id" = ?[0m  [["todo_item_id", 4]]
+  ↳ app/views/todo_items/_todo_item.html.erb:23
+  Rendered collection of todo_items/_todo_item.html.erb [2 times] (18.5ms)
+  Rendered todo_items/_new.html.erb (86.6ms)
+  Rendered todo_lists/show.html.erb within layouts/application (129.6ms)
+Completed 200 OK in 210ms (Views: 188.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tags/2" for ::1 at 2020-01-18 00:36:20 +0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/views/tags/show.html.erb:14
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:5
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."todo_item_id" = ?[0m  [["todo_item_id", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:23
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (5.6ms)
+  Rendered tags/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 130ms (Views: 107.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tags/2" for ::1 at 2020-01-18 00:38:16 +0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" INNER JOIN "taggings" ON "todo_items"."id" = "taggings"."todo_item_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/views/tags/show.html.erb:14
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:5
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."todo_item_id" = ?[0m  [["todo_item_id", 1]]
+  ↳ app/views/todo_items/_todo_item.html.erb:23
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (11.9ms)
+  Rendered tags/show.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 185ms (Views: 157.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/todo_lists" for ::1 at 2020-01-18 00:38:17 +0800
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.erb:15
+  Rendered todo_lists/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 156ms (Views: 143.0ms | ActiveRecord: 0.3ms)
+
+

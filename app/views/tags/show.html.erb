@@ -1,7 +1,19 @@
 <h1>Tasks Tagged with <%= @tag.name %></h1>
 
-<ul>
-  <% @tag.todo_items.each do |todo_item| %>
-    <li><%= link_to todo_item.title, article_path(todo_item) %></li>
-  <% end %>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Completed</th>
+      <th>Description</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id= "todo_items_wrap">
+      <%= render @tag.todo_items %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to 'Back', todo_lists_path %>
