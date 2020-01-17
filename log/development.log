@@ -1,0 +1,28 @@
+Started GET "/" for ::1 at 2020-01-16 21:06:48 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (6.3ms)
+Completed 200 OK in 30ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-16 21:07:55 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (8.1ms)
+Completed 200 OK in 32ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-16 21:07:56 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-16 21:07:58 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sruthi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
