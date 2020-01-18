@@ -1,5 +1,0 @@
-<%= form_for([@todo_list, @todo_list.todo_items.build]) do |form| %>
- <%= form.text_field :content, placeholder: "New Task" %>
- <%= form.text_field :list_of_tags, placeholder: "Tags" %>
- <%= form.submit %>
-<% end %>
