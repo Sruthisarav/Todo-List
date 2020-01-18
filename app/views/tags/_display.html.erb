@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Completed</th>
+      <th>Description</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id= "todo_items_wrap">
+      <%= render @tag.todo_items %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to 'Back', todo_lists_path %>
