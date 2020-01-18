@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     end
   end
   resources :tags
+  patch "/todo_lists/:todo_list_id/todo_items/:id/edit" => "todo_items#edit"
 end

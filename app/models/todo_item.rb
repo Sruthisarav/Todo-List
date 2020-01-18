@@ -18,7 +18,7 @@ class TodoItem < ApplicationRecord
       tag = tag_string.strip.downcase
       tag_names << tag if !tag_names.include?(tag)
     end
-    tag_names.collect {|name| self.tags << Tag.find_or_create_by(name: name)}
-    return self.tags
+    new_or_found_tags = tag_names.collect { |name| Tag.find_or_create_by(name: name) }
+    self.tags = new_or_found_tags
   end
 end

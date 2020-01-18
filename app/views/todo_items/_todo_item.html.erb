@@ -24,6 +24,7 @@
       <%= link_to tag.name, tag_path(tag) %>
       <% end %>
     </p>
+    <%= link_to 'Edit', edit_todo_list_todo_item_path(todo_item.todo_list.id, todo_item.id), method: :patch %>
   </td>
   <td>
     <div class = "delete-btn">
