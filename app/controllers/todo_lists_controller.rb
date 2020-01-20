@@ -5,7 +5,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists.json
   def index
     @todo_lists = TodoList.all
-    #render component: 'Todo List/Index/Home', props: { todo_lists: @todo_lists }
+    #render component: 'Todo List/Index/Home', props: { todo_lists: @todo_lists.to_json }
   end
 
   # GET /todo_lists/1

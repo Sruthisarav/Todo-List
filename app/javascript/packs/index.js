@@ -9,8 +9,10 @@ import Home from '../components/Todo List/Index/Home'
 import 'font-awesome/css/font-awesome.min.css'
 
 document.addEventListener('DOMContentLoaded', () => {
+  const node = document.getElementById('todo_lists_data')
+  const data = JSON.parse(node.getAttribute('data'))
   ReactDOM.render(
-    <Home  />,
+    <Home todo_lists={data} />,
     document.body.appendChild(document.createElement('div')),
   )
 })

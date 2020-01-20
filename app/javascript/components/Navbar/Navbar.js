@@ -8,7 +8,7 @@ const navbar = props => (
             <div className = "navbar_toggle_btn">
                 <Togglebtn click = {props.barClickHandler} />
             </div>
-            <div className = "navbar_logo"><a href="The logo">My App</a></div>
+            <div className = "navbar_logo"><a href="The logo">Todo List App</a></div>
             <div className = "space"></div>
             <div className = "navbar_navigation_items">
                 <ul>

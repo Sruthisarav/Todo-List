@@ -1,7 +1,7 @@
 class TodoItem < ApplicationRecord
   belongs_to :todo_list
-  has_many :taggings
-  has_many :tags, through: :taggings
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings, dependent: :destroy
   def completed?
     return !completed_at.nil?
   end

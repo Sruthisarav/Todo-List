@@ -1,50 +1,60 @@
 {
-  "application.js": "/packs/js/application-7f5ff19853c499f4c6ac.js",
-  "application.js.map": "/packs/js/application-7f5ff19853c499f4c6ac.js.map",
+  "application.js": "/packs/js/application-65da359563b9868b5dcf.js",
+  "application.js.map": "/packs/js/application-65da359563b9868b5dcf.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-7f5ff19853c499f4c6ac.js"
+        "/packs/js/application-65da359563b9868b5dcf.js"
       ],
       "js.map": [
-        "/packs/js/application-7f5ff19853c499f4c6ac.js.map"
+        "/packs/js/application-65da359563b9868b5dcf.js.map"
       ]
     },
     "index": {
       "js": [
-        "/packs/js/index-ee3586c816b89af9d7b4.js"
+        "/packs/js/index-4156d96abc0b65946bb0.js"
       ],
       "js.map": [
-        "/packs/js/index-ee3586c816b89af9d7b4.js.map"
+        "/packs/js/index-4156d96abc0b65946bb0.js.map"
       ]
     },
     "main": {
       "js": [
-        "/packs/js/main-30cd303b8781e45195be.js"
+        "/packs/js/main-0abe41550b9cf86c0f81.js"
       ],
       "js.map": [
-        "/packs/js/main-30cd303b8781e45195be.js.map"
+        "/packs/js/main-0abe41550b9cf86c0f81.js.map"
       ]
     },
     "server_rendering": {
       "js": [
-        "/packs/js/server_rendering-1f2652024df9ec333904.js"
+        "/packs/js/server_rendering-c793a88e4dd4a120449b.js"
       ],
       "js.map": [
-        "/packs/js/server_rendering-1f2652024df9ec333904.js.map"
+        "/packs/js/server_rendering-c793a88e4dd4a120449b.js.map"
+      ]
+    },
+    "show": {
+      "js": [
+        "/packs/js/show-ec681a8ea69cae4d841b.js"
+      ],
+      "js.map": [
+        "/packs/js/show-ec681a8ea69cae4d841b.js.map"
       ]
     }
   },
-  "index.js": "/packs/js/index-ee3586c816b89af9d7b4.js",
-  "index.js.map": "/packs/js/index-ee3586c816b89af9d7b4.js.map",
-  "main.js": "/packs/js/main-30cd303b8781e45195be.js",
-  "main.js.map": "/packs/js/main-30cd303b8781e45195be.js.map",
+  "index.js": "/packs/js/index-4156d96abc0b65946bb0.js",
+  "index.js.map": "/packs/js/index-4156d96abc0b65946bb0.js.map",
+  "main.js": "/packs/js/main-0abe41550b9cf86c0f81.js",
+  "main.js.map": "/packs/js/main-0abe41550b9cf86c0f81.js.map",
   "media/components/Todo List/Index/Table/images/todolist.jpg": "/packs/media/components/Todo%20List/Index/Table/images/todolist-13d515f38e4a4181724cfc2689650314.jpg",
   "media/fonts/fontawesome-webfont.eot?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-674f50d2.eot",
   "media/fonts/fontawesome-webfont.svg?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-912ec66d.svg",
   "media/fonts/fontawesome-webfont.ttf?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-b06871f2.ttf",
   "media/fonts/fontawesome-webfont.woff2?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-af7ae505.woff2",
   "media/fonts/fontawesome-webfont.woff?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-fee66e71.woff",
-  "server_rendering.js": "/packs/js/server_rendering-1f2652024df9ec333904.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-1f2652024df9ec333904.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-c793a88e4dd4a120449b.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-c793a88e4dd4a120449b.js.map",
+  "show.js": "/packs/js/show-ec681a8ea69cae4d841b.js",
+  "show.js.map": "/packs/js/show-ec681a8ea69cae4d841b.js.map"
 }

@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 <%= javascript_pack_tag 'main' %>
+
+<%= content_tag :div,
+  id: "todo_lists_data",
+  data: @todo_lists.to_json do %>
+<% end %>
 <%= javascript_pack_tag 'index' %>
 
 <h1>Todo Lists</h1>
