@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Image from "./Image";
-import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
 const Item = (props) => {
     return (
