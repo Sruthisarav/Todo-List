@@ -1,13 +1,13 @@
 {
-  "application.js": "/packs/js/application-1551ae0ff3aba59760d4.js",
-  "application.js.map": "/packs/js/application-1551ae0ff3aba59760d4.js.map",
+  "application.js": "/packs/js/application-7f5ff19853c499f4c6ac.js",
+  "application.js.map": "/packs/js/application-7f5ff19853c499f4c6ac.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-1551ae0ff3aba59760d4.js"
+        "/packs/js/application-7f5ff19853c499f4c6ac.js"
       ],
       "js.map": [
-        "/packs/js/application-1551ae0ff3aba59760d4.js.map"
+        "/packs/js/application-7f5ff19853c499f4c6ac.js.map"
       ]
     },
     "index": {
@@ -20,31 +20,31 @@
     },
     "main": {
       "js": [
-        "/packs/js/main-d6caaa96329c0c3d2358.js"
+        "/packs/js/main-30cd303b8781e45195be.js"
       ],
       "js.map": [
-        "/packs/js/main-d6caaa96329c0c3d2358.js.map"
+        "/packs/js/main-30cd303b8781e45195be.js.map"
       ]
     },
     "server_rendering": {
       "js": [
-        "/packs/js/server_rendering-a10e37cd3fdde96bf52e.js"
+        "/packs/js/server_rendering-1f2652024df9ec333904.js"
       ],
       "js.map": [
-        "/packs/js/server_rendering-a10e37cd3fdde96bf52e.js.map"
+        "/packs/js/server_rendering-1f2652024df9ec333904.js.map"
       ]
     }
   },
   "index.js": "/packs/js/index-ee3586c816b89af9d7b4.js",
   "index.js.map": "/packs/js/index-ee3586c816b89af9d7b4.js.map",
-  "main.js": "/packs/js/main-d6caaa96329c0c3d2358.js",
-  "main.js.map": "/packs/js/main-d6caaa96329c0c3d2358.js.map",
+  "main.js": "/packs/js/main-30cd303b8781e45195be.js",
+  "main.js.map": "/packs/js/main-30cd303b8781e45195be.js.map",
   "media/components/Todo List/Index/Table/images/todolist.jpg": "/packs/media/components/Todo%20List/Index/Table/images/todolist-13d515f38e4a4181724cfc2689650314.jpg",
   "media/fonts/fontawesome-webfont.eot?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-674f50d2.eot",
   "media/fonts/fontawesome-webfont.svg?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-912ec66d.svg",
   "media/fonts/fontawesome-webfont.ttf?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-b06871f2.ttf",
   "media/fonts/fontawesome-webfont.woff2?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-af7ae505.woff2",
   "media/fonts/fontawesome-webfont.woff?v=4.7.0": "/packs/media/fonts/fontawesome-webfont-fee66e71.woff",
-  "server_rendering.js": "/packs/js/server_rendering-a10e37cd3fdde96bf52e.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-a10e37cd3fdde96bf52e.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-1f2652024df9ec333904.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-1f2652024df9ec333904.js.map"
 }

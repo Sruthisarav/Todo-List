@@ -9,15 +9,24 @@
 
 .navbar_navigation {
     display: flex;
+    flex: 1;
     align-items: center;
     height: 100%;
     padding: 0 1rem;
+}
+
+.navbar_logo {
+    margin-left:3%;
 }
 
 .navbar_logo a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
+}
+
+.space {
+    flex: 1
 }
 
 .navbar_navigation_items ul {
@@ -38,5 +47,22 @@
 
 .navbar_navigation_items a:hover,
 .navbar_navigation_items a:active {
-    color: pink;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar_navigation_items {
+        display: none;
+    }
+    .navbar_logo {
+        margin-left: 50px;
+    }
+}
+@media (min-width: 769px) {
+    .navbar_toggle_btn {
+        display: none
+    }
+    .navbar_logo {
+        margin-left: 0;
+    }
 }
