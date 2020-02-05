@@ -1,5 +1,8 @@
-<p id="notice"><%= notice %></p>
-<%= javascript_pack_tag 'show' %>
+<%= javascript_pack_tag 'show'%>
+<%= content_tag :div,
+  id: "todo-list_data",
+  data: @todo_list.to_json do %>
+<% end %>
 
 <div id="search">
   <%= render "tags/form" %>
