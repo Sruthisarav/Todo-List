@@ -6,7 +6,7 @@ require_relative 'config/application'
 Rails.application.load_tasks
 
 Rake::Task["assets:clean"].enhance do
-  ["#{Dir.pwd}/app/javascript/components", "#{Dir.pwd}/app/assets/"].each do |dir_path|
+  ["#{Dir.pwd}/app/javascript/packs", "#{Dir.pwd}/app/assets/"].each do |dir_path|
     records = Dir.glob("#{dir_path}**/*")
     records.each do |f|
       if !(f =~ /manifest.*.json$/)
