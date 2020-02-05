@@ -1,2 +1,2 @@
 web: bundle exec rails server -p $PORT
-api: rails s -p 3001
+api: bundle exec rails s -p 3001
