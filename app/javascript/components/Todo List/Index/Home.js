@@ -20,7 +20,7 @@ class Home extends Component {
             .then(response => {
                 this.setState({ todo_lists: response.data })
             })
-            .catch(error => console.log(error.response.data))
+            .catch(error => console.log(error.response))
     }
 
     addNewTodoList = () => {
