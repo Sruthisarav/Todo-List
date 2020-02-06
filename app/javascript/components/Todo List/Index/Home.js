@@ -42,7 +42,7 @@ class Home extends Component {
     }
 
     deleteTodoList = (id) => {
-        axios.delete(this.baseURL+`api/v1/todo_lists/${id}`)
+        axios.delete(this.baseURL+`/api/v1/todo_lists/${id}`)
             .then(response => {
                 const todoListIndex = this.state.todo_lists.findIndex(x => x.id === id)
                 const todo_lists = update(this.state.todo_lists, { $splice: [[todoListIndex, 1]] })

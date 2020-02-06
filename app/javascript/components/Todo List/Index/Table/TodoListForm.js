@@ -17,7 +17,7 @@ class TodoListForm extends Component {
     handleBlur = () => {
         const todo_list = { title: this.state.title, description: this.state.description }
         axios.put(
-            `api/v1/todo_lists/${this.props.todo_list.id}`,
+            `/api/v1/todo_lists/${this.props.todo_list.id}`,
             { todo_list: todo_list }
         )
             .then(response => {
