@@ -81,46 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/javascript/packs/show.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/javascript/packs/search.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/javascript/components/Todo List/Show/Main.css":
-/*!***********************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Main.css ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./Main.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Todo List/Show/Main.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./app/javascript/components/Todo List/Show/Main.js":
-/*!**********************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Main.js ***!
-  \**********************************************************/
+/***/ "./app/javascript/components/Search/Main.js":
+/*!**************************************************!*\
+  !*** ./app/javascript/components/Search/Main.js ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -130,15 +99,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var immutability_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! immutability-helper */ "./node_modules/immutability-helper/index.js");
-/* harmony import */ var immutability_helper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(immutability_helper__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Main.css */ "./app/javascript/components/Todo List/Show/Main.css");
-/* harmony import */ var _Main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Main_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Table_TodoBox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Table/TodoBox */ "./app/javascript/components/Todo List/Show/Table/TodoBox.js");
-/* harmony import */ var _Table_TodoItemForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Table/TodoItemForm */ "./app/javascript/components/Todo List/Show/Table/TodoItemForm.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Main.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Search/Main.js";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -155,10 +124,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
 
 
 
@@ -175,157 +140,52 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Main).call(this, props));
 
-    _this.addNewTodoItem = function () {
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://localhost:3001/api/v1/todo_lists/".concat(_this.state.todo_list_id, "/todo_items"), {
-        todo_item: {
-          content: '',
-          list_of_tags: ''
+    _this.handleSubmit = function (event) {
+      event.preventDefault();
+
+      var data = _toConsumableArray(event.target.elements).reduce(function (data, element) {
+        if (element.name && element.value) {
+          data[element.name] = element.value;
         }
-      }).then(function (response) {
-        var todo_items = immutability_helper__WEBPACK_IMPORTED_MODULE_2___default()(_this.state.todo_items, {
-          $splice: [[0, 0, response.data]]
-        });
 
-        _this.setState({
-          todo_items: todo_items,
-          editingTodoItemId: response.data.id
-        });
-      })["catch"](function (error) {
-        return console.log(error.response.data);
-      });
-    };
+        return data;
+      }, {});
 
-    _this.updateTodoItem = function (todo_item) {
-      var todoItemIndex = _this.state.todo_items.findIndex(function (x) {
-        return x.id === todo_item.id;
-      });
-
-      var todo_items = immutability_helper__WEBPACK_IMPORTED_MODULE_2___default()(_this.state.todo_items, _defineProperty({}, todoItemIndex, {
-        $set: todo_item
-      }));
-
-      _this.setState({
-        todo_items: todo_items,
-        transitionIn: true
-      });
-    };
-
-    _this.deleteTodoItem = function (id) {
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]("http://localhost:3001/api/v1/todo_lists/".concat(_this.state.todo_list_id, "/todo_items/").concat(id)).then(function (response) {
-        var todoItemIndex = _this.state.todo_items.findIndex(function (x) {
-          return x.id === id;
-        });
-
-        var todo_items = immutability_helper__WEBPACK_IMPORTED_MODULE_2___default()(_this.state.todo_items, {
-          $splice: [[todoItemIndex, 1]]
-        });
-
-        _this.setState({
-          todo_items: todo_items
-        });
-      })["catch"](function (error) {
-        return console.log(error);
-      });
-    };
-
-    _this.enableEditing = function (id) {
-      _this.setState({
-        editingTodoItemId: id
-      }, function () {
-        _this.title.focus();
-      });
+      _this.state.search = data.tag_search;
+      window.location.href = "/search?search=" + _this.state.search;
     };
 
     _this.state = {
-      todo_list_id: _this.props.todo_list_id,
-      todo_items: [],
-      editingTodoItemId: null,
-      transitionIn: false
+      search: ""
     };
     return _this;
   }
 
   _createClass(Main, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://localhost:3001/api/v1/todo_lists/".concat(this.state.todo_list_id, "/todo_items.json")).then(function (response) {
-        _this2.setState({
-          todo_items: response.data
-        });
-      })["catch"](function (error) {
-        return console.log(error.response.data);
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "new-todo",
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 26
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "tag_search",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 27
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        id: "todo-form",
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 28
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.addNewTodoItem,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: this
-      }, "Add Task"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 68
-        },
-        __self: this
-      }, this.state.todo_items.map(function (todo_item) {
-        if (_this3.state.editingTodoItemId === todo_item.id) {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_TodoItemForm__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            todo_item: todo_item,
-            key: todo_item.id,
-            updateTodoItem: _this3.updateTodoItem,
-            titleRef: function titleRef(input) {
-              return _this3.title = input;
-            },
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 71
-            },
-            __self: this
-          });
-        } else {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_TodoBox__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            todo_item: todo_item,
-            key: todo_item.id,
-            onClick: _this3.enableEditing,
-            onDelete: _this3.deleteTodoItem,
-            update: _this3.updateTodoItem,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 74
-            },
-            __self: this
-          });
-        }
-      })));
+      }, "Search"));
     }
   }]);
 
@@ -336,566 +196,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./app/javascript/components/Todo List/Show/Table/Tag.css":
-/*!****************************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Table/Tag.css ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../../node_modules/postcss-loader/src??ref--6-2!./Tag.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Todo List/Show/Table/Tag.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./app/javascript/components/Todo List/Show/Table/Tag.js":
-/*!***************************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Table/Tag.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Tag_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tag.css */ "./app/javascript/components/Todo List/Show/Table/Tag.css");
-/* harmony import */ var _Tag_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Tag_css__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/Tag.js";
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var Tag =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Tag, _Component);
-
-  function Tag() {
-    _classCallCheck(this, Tag);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Tag).apply(this, arguments));
-  }
-
-  _createClass(Tag, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "tags",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        },
-        __self: this
-      }, this.props.tags.map(function (tag) {
-        var name = " " + tag.name;
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "/tags/" + tag.id,
-          key: tag.id,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 12
-          },
-          __self: this
-        }, name);
-      }));
-    }
-  }]);
-
-  return Tag;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Tag);
-
-/***/ }),
-
-/***/ "./app/javascript/components/Todo List/Show/Table/TodoBox.js":
-/*!*******************************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Table/TodoBox.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _TodoList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TodoList */ "./app/javascript/components/Todo List/Show/Table/TodoList.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoBox.js";
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var TodoBox =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(TodoBox, _Component);
-
-  function TodoBox() {
-    _classCallCheck(this, TodoBox);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(TodoBox).apply(this, arguments));
-  }
-
-  _createClass(TodoBox, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 7
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TodoList__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        todo_item: this.props.todo_item,
-        key: this.props.todo_item.id,
-        onClick: this.props.onClick,
-        onDelete: this.props.onDelete,
-        update: this.props.update,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return TodoBox;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (TodoBox);
-
-/***/ }),
-
-/***/ "./app/javascript/components/Todo List/Show/Table/TodoItemForm.css":
-/*!*************************************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Table/TodoItemForm.css ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../../node_modules/postcss-loader/src??ref--6-2!./TodoItemForm.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Todo List/Show/Table/TodoItemForm.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./app/javascript/components/Todo List/Show/Table/TodoItemForm.js":
-/*!************************************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Table/TodoItemForm.js ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _TodoItemForm_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TodoItemForm.css */ "./app/javascript/components/Todo List/Show/Table/TodoItemForm.css");
-/* harmony import */ var _TodoItemForm_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_TodoItemForm_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoItemForm.js";
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-var TodoItemForm =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(TodoItemForm, _Component);
-
-  function TodoItemForm(props) {
-    var _this;
-
-    _classCallCheck(this, TodoItemForm);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(TodoItemForm).call(this, props));
-
-    _this.handleInput = function (e) {
-      _this.setState(_defineProperty({}, e.target.name, e.target.value));
-    };
-
-    _this.handleBlur = function () {
-      var todo_item = {
-        content: _this.state.content,
-        list_of_tags: _this.state.list_of_tags
-      };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.put("http://localhost:3001/api/v1/todo_lists/".concat(_this.props.todo_item.todo_list_id, "/todo_items/").concat(_this.props.todo_item.id), {
-        todo_item: todo_item
-      }).then(function (response) {
-        console.log(response);
-
-        _this.props.updateTodoItem(response.data);
-      })["catch"](function (error) {
-        return console.log(error.response);
-      });
-    };
-
-    _this.state = {
-      content: _this.props.todo_item.content,
-      list_of_tags: _this.props.todo_item.list_of_tags
-    };
-    return _this;
-  }
-
-  _createClass(TodoItemForm, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "tile",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onBlur: this.handleBlur,
-        className: "list",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "input",
-        type: "text",
-        name: "content",
-        placeholder: "Enter a Task",
-        value: this.state.content || "",
-        onChange: this.handleInput,
-        ref: this.props.titleRef,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "input",
-        type: "text",
-        name: "list_of_tags",
-        placeholder: "Enter tags",
-        value: this.state.list_of_tags,
-        onChange: this.handleInput,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.handleInput,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: this
-      }, "Enter")));
-    }
-  }]);
-
-  return TodoItemForm;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (TodoItemForm);
-
-/***/ }),
-
-/***/ "./app/javascript/components/Todo List/Show/Table/TodoList.css":
-/*!*********************************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Table/TodoList.css ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../../node_modules/postcss-loader/src??ref--6-2!./TodoList.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Todo List/Show/Table/TodoList.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./app/javascript/components/Todo List/Show/Table/TodoList.js":
-/*!********************************************************************!*\
-  !*** ./app/javascript/components/Todo List/Show/Table/TodoList.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _TodoList_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TodoList.css */ "./app/javascript/components/Todo List/Show/Table/TodoList.css");
-/* harmony import */ var _TodoList_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TodoList_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tag */ "./app/javascript/components/Todo List/Show/Table/Tag.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoList.js";
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-var TodoList =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(TodoList, _Component);
-
-  function TodoList(props) {
-    var _this;
-
-    _classCallCheck(this, TodoList);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(TodoList).call(this, props));
-
-    _this.handleClick = function () {
-      _this.props.onClick(_this.props.todo_item.id);
-    };
-
-    _this.handleDelete = function () {
-      _this.props.onDelete(_this.props.todo_item.id);
-    };
-
-    _this.handleComplete = function () {
-      if (_this.state.completed) {
-        return "completed";
-      }
-
-      return "incomplete";
-    };
-
-    _this.handleChange = function (e) {
-      _this.props.todo_item.completed = e.target.checked;
-      _this.state.completed = _this.props.todo_item.completed;
-
-      _this.props.update(_this.props.todo_item);
-    };
-
-    _this.todo_item = function () {
-      if (_this.state.completed) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          onClick: _this.handleClick,
-          className: "completed",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 33
-          },
-          __self: this
-        }, _this.props.todo_item.content, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-          className: "fa fa-trash",
-          "aria-hidden": "true",
-          onClick: _this.handleDelete,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 35
-          },
-          __self: this
-        }));
-      } else {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          onClick: _this.handleClick,
-          className: "incomplete",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 40
-          },
-          __self: this
-        }, _this.props.todo_item.content, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-          className: "fa fa-trash",
-          "aria-hidden": "true",
-          onClick: _this.handleDelete,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 42
-          },
-          __self: this
-        }));
-      }
-    };
-
-    _this.state = {
-      completed: _this.props.todo_item.completed
-    };
-    return _this;
-  }
-
-  _createClass(TodoList, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "todo_items",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "list",
-        id: this.props.todo_item.id,
-        key: this.props.todo_item.id,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox",
-        className: "box",
-        onChange: this.handleChange,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(this.todo_item, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        tags: this.props.todo_item.list_of_tags,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        },
-        __self: this
-      })));
-    }
-  }]);
-
-  return TodoList;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (TodoList);
-
-/***/ }),
-
-/***/ "./app/javascript/packs/show.js":
-/*!**************************************!*\
-  !*** ./app/javascript/packs/show.js ***!
-  \**************************************/
+/***/ "./app/javascript/packs/search.js":
+/*!****************************************!*\
+  !*** ./app/javascript/packs/search.js ***!
+  \****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -909,21 +213,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! font-awesome/css/font-awesome.min.css */ "./node_modules/font-awesome/css/font-awesome.min.css");
 /* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Todo_List_Show_Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Todo List/Show/Main */ "./app/javascript/components/Todo List/Show/Main.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/packs/show.js";
+/* harmony import */ var _components_Search_Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Search/Main */ "./app/javascript/components/Search/Main.js");
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/packs/search.js";
 
 
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  var node = document.getElementById('todo-list_data');
-  var todo_list = JSON.parse(node.getAttribute('data'));
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Todo_List_Show_Main__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    todo_list_id: todo_list.id,
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Search_Main__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 9
     },
     __self: this
   }), document.body.appendChild(document.createElement('div')));
@@ -2733,78 +2034,6 @@ module.exports = exported;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Todo List/Show/Main.css":
-/*!*******************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/components/Todo List/Show/Main.css ***!
-  \*******************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".new-todo {\n    background-color: indigo;\n    min-height: 500px;\n    height: auto;\n    width: 400px;\n    margin: 40px auto;\n}\n\n#todo-form input {\n    background-color: lightblue;\n    border: 0;\n    width: 200px;\n    height: 50px;\n    padding: 0 20px;\n    margin: 20px;\n    font-size: 18px;\n    border-radius: 10px;\n    color: white;\n}\n\n#todo-form input::-webkit-input-placeholder {\n    color: black;\n}\n\n#todo-form input::-moz-placeholder {\n    color: black;\n}\n\n#todo-form input:-ms-input-placeholder {\n    color: black;\n}\n\n#todo-form input::-ms-input-placeholder {\n    color: black;\n}\n\n#todo-form input::placeholder {\n    color: black;\n}\n\n#todo-form input:focus, #todo-form button:focus {\n    outline: none;\n}\n\n#todo-form button {\n    height: 50px;\n    width: 200px;\n    border-radius: 5px;\n    border: 0;\n    background-color: blue;\n    cursor: pointer;\n    font-weight: bolder;\n    color: white;\n    margin-top: 10px;\n    align-items: center;\n}\n\nul {\n    list-style: none;\n}", "",{"version":3,"sources":["Main.css"],"names":[],"mappings":"AAAA;IACI,wBAAwB;IACxB,iBAAiB;IACjB,YAAY;IACZ,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,2BAA2B;IAC3B,SAAS;IACT,YAAY;IACZ,YAAY;IACZ,eAAe;IACf,YAAY;IACZ,eAAe;IACf,mBAAmB;IACnB,YAAY;AAChB;;AAEA;IACI,YAAY;AAChB;;AAFA;IACI,YAAY;AAChB;;AAFA;IACI,YAAY;AAChB;;AAFA;IACI,YAAY;AAChB;;AAFA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,sBAAsB;IACtB,eAAe;IACf,mBAAmB;IACnB,YAAY;IACZ,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;AACpB","file":"Main.css","sourcesContent":[".new-todo {\n    background-color: indigo;\n    min-height: 500px;\n    height: auto;\n    width: 400px;\n    margin: 40px auto;\n}\n\n#todo-form input {\n    background-color: lightblue;\n    border: 0;\n    width: 200px;\n    height: 50px;\n    padding: 0 20px;\n    margin: 20px;\n    font-size: 18px;\n    border-radius: 10px;\n    color: white;\n}\n\n#todo-form input::placeholder {\n    color: black;\n}\n\n#todo-form input:focus, #todo-form button:focus {\n    outline: none;\n}\n\n#todo-form button {\n    height: 50px;\n    width: 200px;\n    border-radius: 5px;\n    border: 0;\n    background-color: blue;\n    cursor: pointer;\n    font-weight: bolder;\n    color: white;\n    margin-top: 10px;\n    align-items: center;\n}\n\nul {\n    list-style: none;\n}"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Todo List/Show/Table/Tag.css":
-/*!************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/components/Todo List/Show/Table/Tag.css ***!
-  \************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, "a {\n    font-size: 15px;\n}", "",{"version":3,"sources":["Tag.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB","file":"Tag.css","sourcesContent":["a {\n    font-size: 15px;\n}"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Todo List/Show/Table/TodoItemForm.css":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/components/Todo List/Show/Table/TodoItemForm.css ***!
-  \*********************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".list {\n    width: 300px;\n    background-color: #bf07ac;\n    height: 50px;\n}", "",{"version":3,"sources":["TodoItemForm.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,yBAAyB;IACzB,YAAY;AAChB","file":"TodoItemForm.css","sourcesContent":[".list {\n    width: 300px;\n    background-color: #bf07ac;\n    height: 50px;\n}"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Todo List/Show/Table/TodoList.css":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/components/Todo List/Show/Table/TodoList.css ***!
-  \*****************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".list {\n    color: white;\n    width: 300px;\n    background-color: #bf07ac;\n    height: 50px;\n    margin: 20px auto;\n    border-radius: 5px;\n}\n\n.list p {\n    padding: 10px;\n    position: relative;\n}\n\n.list p i {\n    position: absolute;\n    right: 10px;\n    cursor: pointer;\n}\n\n.todo_items {\n    background-color:indigo;\n}\n\n.fa {\n    margin: 0 5px;\n    font-size: 15px;\n}\n\n.tags {\n    font-size: 5px;\n}\n\n.completed {\n    color: gray; \n    text-decoration: line-through\n}", "",{"version":3,"sources":["TodoList.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,YAAY;IACZ,yBAAyB;IACzB,YAAY;IACZ,iBAAiB;IACjB,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,eAAe;AACnB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,WAAW;IACX;AACJ","file":"TodoList.css","sourcesContent":[".list {\n    color: white;\n    width: 300px;\n    background-color: #bf07ac;\n    height: 50px;\n    margin: 20px auto;\n    border-radius: 5px;\n}\n\n.list p {\n    padding: 10px;\n    position: relative;\n}\n\n.list p i {\n    position: absolute;\n    right: 10px;\n    cursor: pointer;\n}\n\n.todo_items {\n    background-color:indigo;\n}\n\n.fa {\n    margin: 0 5px;\n    font-size: 15px;\n}\n\n.tags {\n    font-size: 5px;\n}\n\n.completed {\n    color: gray; \n    text-decoration: line-through\n}"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/bootstrap/dist/css/bootstrap.css":
 /*!***************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/bootstrap/dist/css/bootstrap.css ***!
@@ -3098,341 +2327,6 @@ module.exports = __webpack_require__.p + "media/fonts/fontawesome-webfont-af7ae5
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "media/fonts/fontawesome-webfont-fee66e71.woff";
-
-/***/ }),
-
-/***/ "./node_modules/immutability-helper/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/immutability-helper/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var invariant = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var splice = Array.prototype.splice;
-var toString = Object.prototype.toString;
-
-function type(obj) {
-  return toString.call(obj).slice(8, -1);
-}
-
-var assign = Object.assign ||
-/* istanbul ignore next */
-function (target, source) {
-  getAllKeys(source).forEach(function (key) {
-    if (hasOwnProperty.call(source, key)) {
-      target[key] = source[key];
-    }
-  });
-  return target;
-};
-
-var getAllKeys = typeof Object.getOwnPropertySymbols === 'function' ? function (obj) {
-  return Object.keys(obj).concat(Object.getOwnPropertySymbols(obj));
-}
-/* istanbul ignore next */
-: function (obj) {
-  return Object.keys(obj);
-};
-
-function copy(object) {
-  return Array.isArray(object) ? assign(object.constructor(object.length), object) : type(object) === 'Map' ? new Map(object) : type(object) === 'Set' ? new Set(object) : object && _typeof(object) === 'object' ? assign(Object.create(Object.getPrototypeOf(object)), object)
-  /* istanbul ignore next */
-  : object;
-}
-
-var Context =
-/** @class */
-function () {
-  function Context() {
-    this.commands = assign({}, defaultCommands);
-    this.update = this.update.bind(this); // Deprecated: update.extend, update.isEquals and update.newContext
-
-    this.update.extend = this.extend = this.extend.bind(this);
-
-    this.update.isEquals = function (x, y) {
-      return x === y;
-    };
-
-    this.update.newContext = function () {
-      return new Context().update;
-    };
-  }
-
-  Object.defineProperty(Context.prototype, "isEquals", {
-    get: function get() {
-      return this.update.isEquals;
-    },
-    set: function set(value) {
-      this.update.isEquals = value;
-    },
-    enumerable: true,
-    configurable: true
-  });
-
-  Context.prototype.extend = function (directive, fn) {
-    this.commands[directive] = fn;
-  };
-
-  Context.prototype.update = function (object, $spec) {
-    var _this = this;
-
-    var spec = typeof $spec === 'function' ? {
-      $apply: $spec
-    } : $spec;
-
-    if (!(Array.isArray(object) && Array.isArray(spec))) {
-      invariant(!Array.isArray(spec), 'update(): You provided an invalid spec to update(). The spec may ' + 'not contain an array except as the value of $set, $push, $unshift, ' + '$splice or any custom command allowing an array value.');
-    }
-
-    invariant(_typeof(spec) === 'object' && spec !== null, 'update(): You provided an invalid spec to update(). The spec and ' + 'every included key path must be plain objects containing one of the ' + 'following commands: %s.', Object.keys(this.commands).join(', '));
-    var nextObject = object;
-    getAllKeys(spec).forEach(function (key) {
-      if (hasOwnProperty.call(_this.commands, key)) {
-        var objectWasNextObject = object === nextObject;
-        nextObject = _this.commands[key](spec[key], nextObject, spec, object);
-
-        if (objectWasNextObject && _this.isEquals(nextObject, object)) {
-          nextObject = object;
-        }
-      } else {
-        var nextValueForKey = type(object) === 'Map' ? _this.update(object.get(key), spec[key]) : _this.update(object[key], spec[key]);
-        var nextObjectValue = type(nextObject) === 'Map' ? nextObject.get(key) : nextObject[key];
-
-        if (!_this.isEquals(nextValueForKey, nextObjectValue) || typeof nextValueForKey === 'undefined' && !hasOwnProperty.call(object, key)) {
-          if (nextObject === object) {
-            nextObject = copy(object);
-          }
-
-          if (type(nextObject) === 'Map') {
-            nextObject.set(key, nextValueForKey);
-          } else {
-            nextObject[key] = nextValueForKey;
-          }
-        }
-      }
-    });
-    return nextObject;
-  };
-
-  return Context;
-}();
-
-exports.Context = Context;
-var defaultCommands = {
-  $push: function $push(value, nextObject, spec) {
-    invariantPushAndUnshift(nextObject, spec, '$push');
-    return value.length ? nextObject.concat(value) : nextObject;
-  },
-  $unshift: function $unshift(value, nextObject, spec) {
-    invariantPushAndUnshift(nextObject, spec, '$unshift');
-    return value.length ? value.concat(nextObject) : nextObject;
-  },
-  $splice: function $splice(value, nextObject, spec, originalObject) {
-    invariantSplices(nextObject, spec);
-    value.forEach(function (args) {
-      invariantSplice(args);
-
-      if (nextObject === originalObject && args.length) {
-        nextObject = copy(originalObject);
-      }
-
-      splice.apply(nextObject, args);
-    });
-    return nextObject;
-  },
-  $set: function $set(value, _nextObject, spec) {
-    invariantSet(spec);
-    return value;
-  },
-  $toggle: function $toggle(targets, nextObject) {
-    invariantSpecArray(targets, '$toggle');
-    var nextObjectCopy = targets.length ? copy(nextObject) : nextObject;
-    targets.forEach(function (target) {
-      nextObjectCopy[target] = !nextObject[target];
-    });
-    return nextObjectCopy;
-  },
-  $unset: function $unset(value, nextObject, _spec, originalObject) {
-    invariantSpecArray(value, '$unset');
-    value.forEach(function (key) {
-      if (Object.hasOwnProperty.call(nextObject, key)) {
-        if (nextObject === originalObject) {
-          nextObject = copy(originalObject);
-        }
-
-        delete nextObject[key];
-      }
-    });
-    return nextObject;
-  },
-  $add: function $add(values, nextObject, _spec, originalObject) {
-    invariantMapOrSet(nextObject, '$add');
-    invariantSpecArray(values, '$add');
-
-    if (type(nextObject) === 'Map') {
-      values.forEach(function (_a) {
-        var key = _a[0],
-            value = _a[1];
-
-        if (nextObject === originalObject && nextObject.get(key) !== value) {
-          nextObject = copy(originalObject);
-        }
-
-        nextObject.set(key, value);
-      });
-    } else {
-      values.forEach(function (value) {
-        if (nextObject === originalObject && !nextObject.has(value)) {
-          nextObject = copy(originalObject);
-        }
-
-        nextObject.add(value);
-      });
-    }
-
-    return nextObject;
-  },
-  $remove: function $remove(value, nextObject, _spec, originalObject) {
-    invariantMapOrSet(nextObject, '$remove');
-    invariantSpecArray(value, '$remove');
-    value.forEach(function (key) {
-      if (nextObject === originalObject && nextObject.has(key)) {
-        nextObject = copy(originalObject);
-      }
-
-      nextObject["delete"](key);
-    });
-    return nextObject;
-  },
-  $merge: function $merge(value, nextObject, _spec, originalObject) {
-    invariantMerge(nextObject, value);
-    getAllKeys(value).forEach(function (key) {
-      if (value[key] !== nextObject[key]) {
-        if (nextObject === originalObject) {
-          nextObject = copy(originalObject);
-        }
-
-        nextObject[key] = value[key];
-      }
-    });
-    return nextObject;
-  },
-  $apply: function $apply(value, original) {
-    invariantApply(value);
-    return value(original);
-  }
-};
-var defaultContext = new Context();
-exports.isEquals = defaultContext.update.isEquals;
-exports.extend = defaultContext.extend;
-exports["default"] = defaultContext.update; // @ts-ignore
-
-exports["default"]["default"] = module.exports = assign(exports["default"], exports); // invariants
-
-function invariantPushAndUnshift(value, spec, command) {
-  invariant(Array.isArray(value), 'update(): expected target of %s to be an array; got %s.', command, value);
-  invariantSpecArray(spec[command], command);
-}
-
-function invariantSpecArray(spec, command) {
-  invariant(Array.isArray(spec), 'update(): expected spec of %s to be an array; got %s. ' + 'Did you forget to wrap your parameter in an array?', command, spec);
-}
-
-function invariantSplices(value, spec) {
-  invariant(Array.isArray(value), 'Expected $splice target to be an array; got %s', value);
-  invariantSplice(spec.$splice);
-}
-
-function invariantSplice(value) {
-  invariant(Array.isArray(value), 'update(): expected spec of $splice to be an array of arrays; got %s. ' + 'Did you forget to wrap your parameters in an array?', value);
-}
-
-function invariantApply(fn) {
-  invariant(typeof fn === 'function', 'update(): expected spec of $apply to be a function; got %s.', fn);
-}
-
-function invariantSet(spec) {
-  invariant(Object.keys(spec).length === 1, 'Cannot have more than one key in an object with $set');
-}
-
-function invariantMerge(target, specValue) {
-  invariant(specValue && _typeof(specValue) === 'object', 'update(): $merge expects a spec of type \'object\'; got %s', specValue);
-  invariant(target && _typeof(target) === 'object', 'update(): $merge expects a target of type \'object\'; got %s', target);
-}
-
-function invariantMapOrSet(target, command) {
-  var typeOfTarget = type(target);
-  invariant(typeOfTarget === 'Map' || typeOfTarget === 'Set', 'update(): %s expects a target of type Set or Map; got %s', command, typeOfTarget);
-}
-
-/***/ }),
-
-/***/ "./node_modules/invariant/browser.js":
-/*!*******************************************!*\
-  !*** ./node_modules/invariant/browser.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
-var invariant = function invariant(condition, format, a, b, c, d, e, f) {
-  if (true) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  }
-
-  if (!condition) {
-    var error;
-
-    if (format === undefined) {
-      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
-    } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(format.replace(/%s/g, function () {
-        return args[argIndex++];
-      }));
-      error.name = 'Invariant Violation';
-    }
-
-    error.framesToPop = 1; // we don't care about invariant's own frame
-
-    throw error;
-  }
-};
-
-module.exports = invariant;
 
 /***/ }),
 
@@ -35666,4 +34560,4 @@ module.exports = function (list, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=show-86f0d6d5826a7569f35a.js.map
+//# sourceMappingURL=search-3a1e0b6c32ba4b56b414.js.map

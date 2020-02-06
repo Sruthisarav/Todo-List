@@ -16,7 +16,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3001/api/v1/todo_lists.json')
+        axios.get('/api/v1/todo_lists.json')
             .then(response => {
                 this.setState({ todo_lists: response.data })
             })
@@ -24,7 +24,7 @@ class Home extends Component {
     }
 
     addNewTodoList = () => {
-        axios.post('http://localhost:3001/api/v1/todo_lists', 
+        axios.post('api/v1/todo_lists', 
         { todo_list: { title: '', description: '' } })
             .then(response => {
                 const todo_lists = update(this.state.todo_lists, 

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/javascript/packs/server_rendering.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/javascript/packs/application.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -214,7 +214,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Backdrop_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Backdrop.css */ "./app/javascript/components/Navbar/Backdrop/Backdrop.css");
 /* harmony import */ var _Backdrop_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Backdrop_css__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Navbar/Backdrop/Backdrop.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/Backdrop/Backdrop.js";
 
 
 
@@ -279,7 +279,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Sidebar_Togglebtn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar/Togglebtn */ "./app/javascript/components/Navbar/Sidebar/Togglebtn.js");
 /* harmony import */ var _Navbar_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar.css */ "./app/javascript/components/Navbar/Navbar.css");
 /* harmony import */ var _Navbar_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Navbar_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Navbar/Navbar.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/Navbar.js";
 
 
 
@@ -394,7 +394,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar */ "./app/javascript/components/Navbar/Navbar.js");
 /* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./app/javascript/components/Navbar/Sidebar/Sidebar.js");
 /* harmony import */ var _Backdrop_Backdrop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Backdrop/Backdrop */ "./app/javascript/components/Navbar/Backdrop/Backdrop.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Navbar/NavbarMain.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/NavbarMain.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -549,7 +549,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Sidebar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar.css */ "./app/javascript/components/Navbar/Sidebar/Sidebar.css");
 /* harmony import */ var _Sidebar_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Sidebar_css__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Navbar/Sidebar/Sidebar.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/Sidebar/Sidebar.js";
 
 
 
@@ -650,7 +650,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Togglebtn_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Togglebtn.css */ "./app/javascript/components/Navbar/Sidebar/Togglebtn.css");
 /* harmony import */ var _Togglebtn_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Togglebtn_css__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Navbar/Sidebar/Togglebtn.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/Sidebar/Togglebtn.js";
 
 
 
@@ -702,7 +702,7 @@ var Togglebtn = function Togglebtn(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Search/Invalid.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Search/Invalid.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -766,7 +766,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Search/Main.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Search/Main.js";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
@@ -874,7 +874,7 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Tags/Item.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Tags/Item.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -980,7 +980,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _TodoItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TodoItem */ "./app/javascript/components/Tags/TodoItem.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Tags/Main.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Tags/Main.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1078,7 +1078,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Item */ "./app/javascript/components/Tags/Item.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Tags/TodoItem.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Tags/TodoItem.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1155,7 +1155,7 @@ function (_Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
@@ -1163,7 +1163,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var immutability_helper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(immutability_helper__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Table_TodoBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Table/TodoBox */ "./app/javascript/components/Todo List/Index/Table/TodoBox.js");
 /* harmony import */ var _Table_TodoListForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Table/TodoListForm */ "./app/javascript/components/Todo List/Index/Table/TodoListForm.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Index/Home.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Index/Home.js";
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -1200,6 +1200,10 @@ function (_Component) {
     _classCallCheck(this, Home);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this, props));
+
+    _this.baseURL = function () {
+      return process.env.baseURL || "http://localhost:3001";
+    };
 
     _this.addNewTodoList = function () {
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://localhost:3001/api/v1/todo_lists', {
@@ -1275,7 +1279,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:3001/api/v1/todo_lists.json').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/v1/todo_lists.json').then(function (response) {
         _this2.setState({
           todo_lists: response.data
         });
@@ -1304,13 +1308,13 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 68
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 69
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1318,7 +1322,7 @@ function (_Component) {
         onClick: this.addNewTodoList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 70
         },
         __self: this
       }, "New Todo List")), this.state.todo_lists.map(function (todo_list) {
@@ -1332,7 +1336,7 @@ function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 75
+              lineNumber: 76
             },
             __self: this
           });
@@ -1345,7 +1349,7 @@ function (_Component) {
             onView: _this4.getTodoList,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 78
+              lineNumber: 79
             },
             __self: this
           });
@@ -1358,6 +1362,7 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -1376,7 +1381,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var immutability_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! immutability-helper */ "./node_modules/immutability-helper/index.js");
 /* harmony import */ var immutability_helper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(immutability_helper__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Index/New Todo List/NewTodoList.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Index/New Todo List/NewTodoList.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1472,7 +1477,7 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Index/Table/Image.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Index/Table/Image.js";
 
 
 var Image = function Image() {
@@ -1515,7 +1520,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Image */ "./app/javascript/components/Todo List/Index/Table/Image.js");
 /* harmony import */ var _TodoList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TodoList */ "./app/javascript/components/Todo List/Index/Table/TodoList.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Index/Table/TodoBox.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Index/Table/TodoBox.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1631,7 +1636,7 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Index/Table/TodoList.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Index/Table/TodoList.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1795,7 +1800,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Index/Table/TodoListForm.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Index/Table/TodoListForm.js";
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -1970,7 +1975,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Main_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Table_TodoBox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Table/TodoBox */ "./app/javascript/components/Todo List/Show/Table/TodoBox.js");
 /* harmony import */ var _Table_TodoItemForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Table/TodoItemForm */ "./app/javascript/components/Todo List/Show/Table/TodoItemForm.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Main.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Show/Main.js";
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2214,7 +2219,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Tag_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tag.css */ "./app/javascript/components/Todo List/Show/Table/Tag.css");
 /* harmony import */ var _Tag_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Tag_css__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/Tag.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/Tag.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2290,7 +2295,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _TodoList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TodoList */ "./app/javascript/components/Todo List/Show/Table/TodoList.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoBox.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoBox.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2400,7 +2405,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _TodoItemForm_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TodoItemForm.css */ "./app/javascript/components/Todo List/Show/Table/TodoItemForm.css");
 /* harmony import */ var _TodoItemForm_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_TodoItemForm_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoItemForm.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoItemForm.js";
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2569,7 +2574,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TodoList_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TodoList.css */ "./app/javascript/components/Todo List/Show/Table/TodoList.css");
 /* harmony import */ var _TodoList_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TodoList_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tag */ "./app/javascript/components/Todo List/Show/Table/Tag.js");
-var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoList.js";
+var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Todo List/Show/Table/TodoList.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2726,15 +2731,29 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./app/javascript/packs/server_rendering.js":
-/*!**************************************************!*\
-  !*** ./app/javascript/packs/server_rendering.js ***!
-  \**************************************************/
+/***/ "./app/javascript/packs/application.js":
+/*!*********************************************!*\
+  !*** ./app/javascript/packs/application.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// By default, this pack is loaded for server-side rendering.
-// It must expose react_ujs as `ReactRailsUJS` and prepare a require context.
+/* eslint no-console:0 */
+// This file is automatically compiled by Webpack, along with any other files
+// present in this directory. You're encouraged to place your actual application logic in
+// a relevant structure within app/javascript and only use these pack files to reference
+// that code so it'll be compiled.
+//
+// To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
+// layout file, like app/views/layouts/application.html.erb
+// Uncomment to copy all static images under ../images to the output folder and reference
+// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
+// or the `imagePath` JavaScript helper below.
+//
+// const images = require.context('../images', true)
+// const imagePath = (name) => images(name, true)
+console.log('Hello World from Webpacker'); // Support component names relative to this directory:
+
 var componentRequireContext = __webpack_require__("./app/javascript/components sync recursive ^\\.\\/.*$");
 
 var ReactRailsUJS = __webpack_require__(/*! react_ujs */ "./node_modules/react_ujs/react_ujs/index.js");
@@ -42005,4 +42024,4 @@ module.exports = function (list, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=server_rendering-f50967d87d8ad2bc053e.js.map
+//# sourceMappingURL=application-b6bcb68ac3a3b623d455.js.map
