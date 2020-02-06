@@ -6,6 +6,7 @@ import TodoBox from './Table/TodoBox'
 import TodoListForm from './Table/TodoListForm'
 
 class Home extends Component {
+    baseURL = () => process.env.baseURL || "http://localhost:3001";
     constructor(props) {
         super(props)
         this.state = {
@@ -24,7 +25,7 @@ class Home extends Component {
     }
 
     addNewTodoList = () => {
-        axios.post('api/v1/todo_lists', 
+        axios.post('/api/v1/todo_lists', 
         { todo_list: { title: '', description: '' } })
             .then(response => {
                 const todo_lists = update(this.state.todo_lists, 
@@ -41,7 +42,7 @@ class Home extends Component {
     }
 
     deleteTodoList = (id) => {
-        axios.delete(`http://localhost:3001/api/v1/todo_lists/${id}`)
+        axios.delete(this.baseURL+`api/v1/todo_lists/${id}`)
             .then(response => {
                 const todoListIndex = this.state.todo_lists.findIndex(x => x.id === id)
                 const todo_lists = update(this.state.todo_lists, { $splice: [[todoListIndex, 1]] })
@@ -55,7 +56,7 @@ class Home extends Component {
     }
 
     getTodoList(id) {
-        axios.get('http://localhost:3000/api/v1/todo_lists/${id}')
+        axios.get(this.baseURL+'/api/v1/todo_lists/${id}')
             .then(response => {
                 this.setState({ todo_items: response.data })
             })
