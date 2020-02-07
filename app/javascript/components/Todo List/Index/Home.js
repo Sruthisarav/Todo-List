@@ -17,7 +17,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get(this.baseURL +`/api/v1/todo_lists.json`)
+        axios.get(`/api/v1/todo_lists.json`)
             .then(response => {
                 this.setState({ todo_lists: response.data })
             })
