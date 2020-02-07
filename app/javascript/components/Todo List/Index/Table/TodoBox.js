@@ -14,7 +14,7 @@ class TodoBox extends Component {
                             </div>
                             <TodoList todo_list={this.props.todo_list}
                                 key={this.props.todo_list.id} onClick={this.props.onClick}
-                                onDelete={this.props.onDelete} onView={this.props.onView} />
+                                onDelete={this.props.onDelete} />
                         </div>
                     </div>
                 </div>

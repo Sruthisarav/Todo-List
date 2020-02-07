@@ -42,7 +42,7 @@ class Home extends Component {
     }
 
     deleteTodoList = (id) => {
-        axios.delete(this.baseURL +`/api/v1/todo_lists/${id}`)
+        axios.delete(`/api/v1/todo_lists/${id}`)
             .then(response => {
                 const todoListIndex = this.state.todo_lists.findIndex(x => x.id === id)
                 const todo_lists = update(this.state.todo_lists, { $splice: [[todoListIndex, 1]] })
@@ -53,14 +53,6 @@ class Home extends Component {
 
     enableEditing = (id) => {
         this.setState({ editingTodoListId: id }, () => { this.title.focus() })
-    }
-
-    getTodoList(id) {
-        axios.get(this.baseURL+'/api/v1/todo_lists/${id}')
-            .then(response => {
-                this.setState({ todo_items: response.data })
-            })
-            .catch(error => console.log(error.response.data))
     }
 
     render() {
@@ -77,7 +69,7 @@ class Home extends Component {
                             titleRef={input => this.title = input} />)
                     } else {
                         return (<TodoBox todo_list={todo_list} key={todo_list.id} onClick={this.enableEditing}
-                            onDelete={this.deleteTodoList} onView={this.getTodoList} />)
+                            onDelete={this.deleteTodoList} />)
                     }
                 })}
             </div>
