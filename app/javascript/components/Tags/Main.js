@@ -13,7 +13,7 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:3001/api/v1/tags/${this.state.tag.id}`)
+        axios.get(`/api/v1/tags/${this.state.tag.id}`)
             .then(response => {
                 this.setState({ todo_items: response.data })
             })
