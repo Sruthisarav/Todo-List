@@ -21,7 +21,8 @@ class Main extends Component {
     componentDidMount() {
         axios.get(`/api/v1/todo_lists/${this.state.todo_list_id}/todo_items.json`)
             .then(response => {
-                this.setState({ todo_items: response.data })
+                this.setState({ todo_items: response.data });
+                window.location.reload();
             })
             .catch(error => console.log(error.response.data))
     }

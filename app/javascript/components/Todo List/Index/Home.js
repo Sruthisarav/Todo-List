@@ -19,7 +19,8 @@ class Home extends Component {
     componentDidMount() {
         axios.get(`/api/v1/todo_lists.json`)
             .then(response => {
-                this.setState({ todo_lists: response.data })
+                this.setState({ todo_lists: response.data });
+                window.location.reload();
             })
             .catch(error => console.log(error.response))
     }
