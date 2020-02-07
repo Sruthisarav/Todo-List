@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const todo_list = JSON.parse(node.getAttribute('data'));
     ReactDOM.render(
         <Main todo_list_id={todo_list.id} />,
-        document.body.appendChild(document.getElementById('show')),
+        document.getElementById('show'),
     )
 })
