@@ -11,6 +11,6 @@ import 'font-awesome/css/font-awesome.min.css'
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Home />,
-    document.body.appendChild(document.createElement('div')),
+    document.body.appendChild(document.getElementById('index')),
   )
 })
