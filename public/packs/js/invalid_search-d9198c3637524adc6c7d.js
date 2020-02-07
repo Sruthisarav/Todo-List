@@ -81,110 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/javascript/packs/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/javascript/packs/invalid_search.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/javascript/components/Navbar/Backdrop/Backdrop.css":
-/*!****************************************************************!*\
-  !*** ./app/javascript/components/Navbar/Backdrop/Backdrop.css ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./Backdrop.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Navbar/Backdrop/Backdrop.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./app/javascript/components/Navbar/Backdrop/Backdrop.js":
-/*!***************************************************************!*\
-  !*** ./app/javascript/components/Navbar/Backdrop/Backdrop.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Backdrop_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Backdrop.css */ "./app/javascript/components/Navbar/Backdrop/Backdrop.css");
-/* harmony import */ var _Backdrop_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Backdrop_css__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/Backdrop/Backdrop.js";
-
-
-
-var backdrop = function backdrop(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "backdrop",
-    onClick: props.click,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (backdrop);
-
-/***/ }),
-
-/***/ "./app/javascript/components/Navbar/Navbar.css":
+/***/ "./app/javascript/components/Search/Invalid.js":
 /*!*****************************************************!*\
-  !*** ./app/javascript/components/Navbar/Navbar.css ***!
+  !*** ./app/javascript/components/Search/Invalid.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./Navbar.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Navbar/Navbar.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./app/javascript/components/Navbar/Navbar.js":
-/*!****************************************************!*\
-  !*** ./app/javascript/components/Navbar/Navbar.js ***!
-  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -192,125 +97,7 @@ module.exports = exported;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Sidebar_Togglebtn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar/Togglebtn */ "./app/javascript/components/Navbar/Sidebar/Togglebtn.js");
-/* harmony import */ var _Navbar_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar.css */ "./app/javascript/components/Navbar/Navbar.css");
-/* harmony import */ var _Navbar_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Navbar_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/Navbar.js";
-
-
-
-
-var navbar = function navbar(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "navbar",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "navbar_navigation",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "navbar_toggle_btn",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar_Togglebtn__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    click: props.barClickHandler,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "navbar_logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "The logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, "Todo List App")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "space",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "navbar_navigation_items",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, "About Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, "Instructions"))))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (navbar);
-
-/***/ }),
-
-/***/ "./app/javascript/components/Navbar/NavbarMain.js":
-/*!********************************************************!*\
-  !*** ./app/javascript/components/Navbar/NavbarMain.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar */ "./app/javascript/components/Navbar/Navbar.js");
-/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./app/javascript/components/Navbar/Sidebar/Sidebar.js");
-/* harmony import */ var _Backdrop_Backdrop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Backdrop/Backdrop */ "./app/javascript/components/Navbar/Backdrop/Backdrop.js");
-var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/NavbarMain.js";
+var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/components/Search/Invalid.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -330,287 +117,41 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-
-
-var NavbarMain =
+var Invalid =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(NavbarMain, _Component);
+  _inherits(Invalid, _Component);
 
-  function NavbarMain() {
-    var _getPrototypeOf2;
+  function Invalid() {
+    _classCallCheck(this, Invalid);
 
-    var _this;
-
-    _classCallCheck(this, NavbarMain);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(NavbarMain)).call.apply(_getPrototypeOf2, [this].concat(args)));
-    _this.state = {
-      sideBarOpen: false
-    };
-
-    _this.sideBarClickHandler = function () {
-      _this.setState(function (prevState) {
-        return {
-          sideBarOpen: !prevState.sideBarOpen
-        };
-      });
-    };
-
-    _this.backdropClickHandler = function () {
-      _this.setState({
-        sideBarOpen: false
-      });
-    };
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Invalid).apply(this, arguments));
   }
 
-  _createClass(NavbarMain, [{
+  _createClass(Invalid, [{
     key: "render",
     value: function render() {
-      var backdrop;
-
-      if (this.state.sideBarOpen) {
-        backdrop = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Backdrop_Backdrop__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          click: this.backdropClickHandler,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 24
-          },
-          __self: this
-        });
-      }
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: {
-          height: '100%'
-        },
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 7
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        barClickHandler: this.sideBarClickHandler,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        show: this.state.sideBarOpen,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }), backdrop);
+      }, "Invalid Search");
     }
   }]);
 
-  return NavbarMain;
+  return Invalid;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (NavbarMain);
+/* harmony default export */ __webpack_exports__["default"] = (Invalid);
 
 /***/ }),
 
-/***/ "./app/javascript/components/Navbar/Sidebar/Sidebar.css":
-/*!**************************************************************!*\
-  !*** ./app/javascript/components/Navbar/Sidebar/Sidebar.css ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./Sidebar.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Navbar/Sidebar/Sidebar.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./app/javascript/components/Navbar/Sidebar/Sidebar.js":
-/*!*************************************************************!*\
-  !*** ./app/javascript/components/Navbar/Sidebar/Sidebar.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Sidebar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar.css */ "./app/javascript/components/Navbar/Sidebar/Sidebar.css");
-/* harmony import */ var _Sidebar_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Sidebar_css__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/Sidebar/Sidebar.js";
-
-
-
-var sideBar = function sideBar(props) {
-  var barClasses = 'sidebar';
-
-  if (props.show) {
-    barClasses = 'sidebar open';
-  }
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: barClasses,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, "About Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, "Instructions"))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (sideBar);
-
-/***/ }),
-
-/***/ "./app/javascript/components/Navbar/Sidebar/Togglebtn.css":
-/*!****************************************************************!*\
-  !*** ./app/javascript/components/Navbar/Sidebar/Togglebtn.css ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./Togglebtn.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Navbar/Sidebar/Togglebtn.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./app/javascript/components/Navbar/Sidebar/Togglebtn.js":
-/*!***************************************************************!*\
-  !*** ./app/javascript/components/Navbar/Sidebar/Togglebtn.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Togglebtn_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Togglebtn.css */ "./app/javascript/components/Navbar/Sidebar/Togglebtn.css");
-/* harmony import */ var _Togglebtn_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Togglebtn_css__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/components/Navbar/Sidebar/Togglebtn.js";
-
-
-
-var Togglebtn = function Togglebtn(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "toggle-btn",
-    onClick: props.click,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "toggle-btn-line",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "toggle-btn-line",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "toggle-btn-line",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Togglebtn);
-
-/***/ }),
-
-/***/ "./app/javascript/packs/main.js":
-/*!**************************************!*\
-  !*** ./app/javascript/packs/main.js ***!
-  \**************************************/
+/***/ "./app/javascript/packs/invalid_search.js":
+/*!************************************************!*\
+  !*** ./app/javascript/packs/invalid_search.js ***!
+  \************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -624,15 +165,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! font-awesome/css/font-awesome.min.css */ "./node_modules/font-awesome/css/font-awesome.min.css");
 /* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Navbar_NavbarMain__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Navbar/NavbarMain */ "./app/javascript/components/Navbar/NavbarMain.js");
-var _jsxFileName = "/Users/sruthisarav/Desktop/Todo-List/app/javascript/packs/main.js";
+/* harmony import */ var _components_Search_Invalid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Search/Invalid */ "./app/javascript/components/Search/Invalid.js");
+var _jsxFileName = "/Users/sruthi/Desktop/Todo-List/app/javascript/packs/invalid_search.js";
 
 
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_NavbarMain__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Search_Invalid__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -671,78 +212,6 @@ var exported = content.locals ? content.locals : {};
 
 
 module.exports = exported;
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Navbar/Backdrop/Backdrop.css":
-/*!************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/components/Navbar/Backdrop/Backdrop.css ***!
-  \************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".backdrop {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    background: rgba(0, 0, 0, 0.3);\n    z-index: 100;\n}", "",{"version":3,"sources":["Backdrop.css"],"names":[],"mappings":"AAAA;IACI,eAAe;IACf,WAAW;IACX,YAAY;IACZ,MAAM;IACN,OAAO;IACP,8BAA8B;IAC9B,YAAY;AAChB","file":"Backdrop.css","sourcesContent":[".backdrop {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    background: rgba(0, 0, 0, 0.3);\n    z-index: 100;\n}"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Navbar/Navbar.css":
-/*!*************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/components/Navbar/Navbar.css ***!
-  \*************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".navbar {\n    width: 100%;\n    top: 0;\n    left: 0;\n    position: fixed;\n    background-color: blue;\n    height: 60px;\n}\n\n.navbar_navigation {\n    display: flex;\n    flex: 1 1;\n    align-items: center;\n    height: 100%;\n    padding: 0 1rem;\n}\n\n.navbar_logo {\n    margin-left:3%;\n}\n\n.navbar_logo a {\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n}\n\n.space {\n    flex: 1 1\n}\n\n.navbar_navigation_items ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    display: flex;\n}\n\n.navbar_navigation_items li {\n    padding: 0 0.5rem;\n}\n\n.navbar_navigation_items a {\n    color: white;\n    text-decoration: none;\n}\n\n.navbar_navigation_items a:hover,\n.navbar_navigation_items a:active {\n    color: white;\n}\n\n@media (max-width: 768px) {\n    .navbar_navigation_items {\n        display: none;\n    }\n    .navbar_logo {\n        margin-left: 50px;\n    }\n}\n\n@media (min-width: 769px) {\n    .navbar_toggle_btn {\n        display: none\n    }\n    .navbar_logo {\n        margin-left: 0;\n    }\n}", "",{"version":3,"sources":["Navbar.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,MAAM;IACN,OAAO;IACP,eAAe;IACf,sBAAsB;IACtB,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,SAAO;IACP,mBAAmB;IACnB,YAAY;IACZ,eAAe;AACnB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,YAAY;IACZ,qBAAqB;IACrB,iBAAiB;AACrB;;AAEA;IACI;AACJ;;AAEA;IACI,gBAAgB;IAChB,SAAS;IACT,UAAU;IACV,aAAa;AACjB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,YAAY;IACZ,qBAAqB;AACzB;;AAEA;;IAEI,YAAY;AAChB;;AAEA;IACI;QACI,aAAa;IACjB;IACA;QACI,iBAAiB;IACrB;AACJ;;AACA;IACI;QACI;IACJ;IACA;QACI,cAAc;IAClB;AACJ","file":"Navbar.css","sourcesContent":[".navbar {\n    width: 100%;\n    top: 0;\n    left: 0;\n    position: fixed;\n    background-color: blue;\n    height: 60px;\n}\n\n.navbar_navigation {\n    display: flex;\n    flex: 1;\n    align-items: center;\n    height: 100%;\n    padding: 0 1rem;\n}\n\n.navbar_logo {\n    margin-left:3%;\n}\n\n.navbar_logo a {\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n}\n\n.space {\n    flex: 1\n}\n\n.navbar_navigation_items ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    display: flex;\n}\n\n.navbar_navigation_items li {\n    padding: 0 0.5rem;\n}\n\n.navbar_navigation_items a {\n    color: white;\n    text-decoration: none;\n}\n\n.navbar_navigation_items a:hover,\n.navbar_navigation_items a:active {\n    color: white;\n}\n\n@media (max-width: 768px) {\n    .navbar_navigation_items {\n        display: none;\n    }\n    .navbar_logo {\n        margin-left: 50px;\n    }\n}\n@media (min-width: 769px) {\n    .navbar_toggle_btn {\n        display: none\n    }\n    .navbar_logo {\n        margin-left: 0;\n    }\n}"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Navbar/Sidebar/Sidebar.css":
-/*!**********************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/components/Navbar/Sidebar/Sidebar.css ***!
-  \**********************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".sidebar {\n    height: 100%;\n    background: white;\n    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 70%;\n    max-width: 400px;\n    z-index: 200;\n    -webkit-transform: translateX(-100%);\n            transform: translateX(-100%);\n    -webkit-transition: -webkit-transform 0.3s ease-out;\n    transition: -webkit-transform 0.3s ease-out;\n    transition: transform 0.3s ease-out;\n    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n\n.sidebar.open {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n}\n\n.sidebar ul {\n    height: 100%;\n    list-style: none;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\n\n.sidebar li {\n    margin: 0.5rem 0;\n}\n\n.sidebar a {\n    color: purple;\n    text-decoration: none;\n    font-size: 1.2rem;\n}\n\n.sidebar a:hover,\n.sidebar a:active {\n    color: rgb(145, 255, 0);\n}", "",{"version":3,"sources":["Sidebar.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,iBAAiB;IACjB,0CAA0C;IAC1C,eAAe;IACf,MAAM;IACN,OAAO;IACP,UAAU;IACV,gBAAgB;IAChB,YAAY;IACZ,oCAA4B;YAA5B,4BAA4B;IAC5B,mDAAmC;IAAnC,2CAAmC;IAAnC,mCAAmC;IAAnC,oEAAmC;AACvC;;AAEA;IACI,gCAAwB;YAAxB,wBAAwB;AAC5B;;AAEA;IACI,YAAY;IACZ,gBAAgB;IAChB,aAAa;IACb,sBAAsB;IACtB,uBAAuB;AAC3B;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,qBAAqB;IACrB,iBAAiB;AACrB;;AAEA;;IAEI,uBAAuB;AAC3B","file":"Sidebar.css","sourcesContent":[".sidebar {\n    height: 100%;\n    background: white;\n    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 70%;\n    max-width: 400px;\n    z-index: 200;\n    transform: translateX(-100%);\n    transition: transform 0.3s ease-out;\n}\n\n.sidebar.open {\n    transform: translateX(0);\n}\n\n.sidebar ul {\n    height: 100%;\n    list-style: none;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\n\n.sidebar li {\n    margin: 0.5rem 0;\n}\n\n.sidebar a {\n    color: purple;\n    text-decoration: none;\n    font-size: 1.2rem;\n}\n\n.sidebar a:hover,\n.sidebar a:active {\n    color: rgb(145, 255, 0);\n}"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/components/Navbar/Sidebar/Togglebtn.css":
-/*!************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/components/Navbar/Sidebar/Togglebtn.css ***!
-  \************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".toggle-btn {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    height: 18px;\n    width: 20px;\n    background: transparent;\n    border: none;\n    box-sizing: border-box;\n}\n\n.toggle-btn:focus {\n    outline: none;\n}\n\n.toggle-btn-line {\n    width: 30px;\n    height: 1px;\n    background: white;\n}", "",{"version":3,"sources":["Togglebtn.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,8BAA8B;IAC9B,YAAY;IACZ,WAAW;IACX,uBAAuB;IACvB,YAAY;IACZ,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,WAAW;IACX,WAAW;IACX,iBAAiB;AACrB","file":"Togglebtn.css","sourcesContent":[".toggle-btn {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    height: 18px;\n    width: 20px;\n    background: transparent;\n    border: none;\n    box-sizing: border-box;\n}\n\n.toggle-btn:focus {\n    outline: none;\n}\n\n.toggle-btn-line {\n    width: 30px;\n    height: 1px;\n    background: white;\n}"]}]);
-// Exports
-module.exports = exports;
-
 
 /***/ }),
 
@@ -33054,4 +32523,4 @@ module.exports = function (list, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main-864d904f9d0eac97e751.js.map
+//# sourceMappingURL=invalid_search-d9198c3637524adc6c7d.js.map
