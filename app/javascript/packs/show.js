@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const todo_list = JSON.parse(node.getAttribute('data'));
     ReactDOM.render(
         <Router>
-            <Route path="/todo_lists/:todo_list" component={Main} />
+            <Route path="/todo_lists/:todo_list" component={() => <Main todo_list_id={todo_list.id} />} />
         </Router>,
         document.body.appendChild(document.createElement('div')),
     )
