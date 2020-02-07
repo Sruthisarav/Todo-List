@@ -19,7 +19,7 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:3001/api/v1/todo_lists/${this.state.todo_list_id}/todo_items.json`)
+        axios.get(`/api/v1/todo_lists/${this.state.todo_list_id}/todo_items.json`)
             .then(response => {
                 this.setState({ todo_items: response.data })
             })
@@ -27,7 +27,7 @@ class Main extends Component {
     }
 
     addNewTodoItem = () => {
-        axios.post(`http://localhost:3001/api/v1/todo_lists/${this.state.todo_list_id}/todo_items`,
+        axios.post(`/api/v1/todo_lists/${this.state.todo_list_id}/todo_items`,
             { todo_item: { content: '', list_of_tags: '' } })
             .then(response => {
                 const todo_items = update(this.state.todo_items,
@@ -44,7 +44,7 @@ class Main extends Component {
     }
 
     deleteTodoItem = (id) => {
-        axios.delete(`http://localhost:3001/api/v1/todo_lists/${this.state.todo_list_id}/todo_items/${id}`)
+        axios.delete(`/api/v1/todo_lists/${this.state.todo_list_id}/todo_items/${id}`)
             .then(response => {
                 const todoItemIndex = this.state.todo_items.findIndex(x => x.id === id)
                 const todo_items = update(this.state.todo_items, { $splice: [[todoItemIndex, 1]] })

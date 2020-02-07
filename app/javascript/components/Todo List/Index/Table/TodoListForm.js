@@ -29,14 +29,33 @@ class TodoListForm extends Component {
 
     render() {
         return (
-            <div className="tile">
-                <form onBlur={this.handleBlur} >
-                    <input className='input' type="text" name="title" placeholder='Enter a Title'
-                        value={this.state.title} onChange={this.handleInput}
-                        ref={this.props.titleRef} />
-                    <textarea className='input' name="description" placeholder='Describe your todo list'
-                        value={this.state.description} onChange={this.handleInput}></textarea>
-                </form>
+            <div className="col-md-8">
+                <div className="pt-4 pb-4">
+                    <div className="tile">
+                        <form onBlur={this.handleBlur} >
+                            <input className='input' type="text" name="title" placeholder='Enter a Title'
+                                value={this.state.title} onChange={this.handleInput}
+                                ref={this.props.titleRef} />
+                            <textarea className='input' name="description" placeholder='Describe your todo list'
+                                value={this.state.description} onChange={this.handleInput}></textarea>
+                        </form>
+                    </div>
+                    <div className="cta-wrapper">
+                        <a href={"/todo_lists/" + this.props.todo_list.id}>
+                            <button type="button" className="btn-outline-primary btn-rounded waves-effect btn cta-btn">
+                                View Todo List <i className="fa fa-eye"></i>
+                            </button>
+                        </a>
+                        <button type="button" className="btn-outline-primary btn-rounded waves-effect btn cta-btn">
+                            Edit <i className="fa fa-pencil"></i>
+                        </button>
+                        <button type="button"
+                            className="btn-outline-primary btn-rounded waves-effect btn cta-btn"
+                            onClick={this.handleDelete}>
+                            Delete <i className="fa fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         );
     }
