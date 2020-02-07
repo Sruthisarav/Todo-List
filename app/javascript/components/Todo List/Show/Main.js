@@ -10,6 +10,7 @@ import TodoItemForm from './Table/TodoItemForm'
 class Main extends Component {
     constructor(props) {
         super(props)
+        window.location.reload();
         this.state = {
             todo_list_id: this.props.todo_list_id,
             todo_items: [],
@@ -22,7 +23,6 @@ class Main extends Component {
         axios.get(`/api/v1/todo_lists/${this.state.todo_list_id}/todo_items.json`)
             .then(response => {
                 this.setState({ todo_items: response.data });
-                window.location.reload();
             })
             .catch(error => console.log(error.response.data))
     }
