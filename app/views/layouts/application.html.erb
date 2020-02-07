@@ -12,9 +12,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <div id="navbar"></div>
+    <div id="search_tag"></div>
     <%= javascript_pack_tag 'main' %>
     <%= javascript_pack_tag 'search'%>
     <%= yield %>

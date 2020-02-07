@@ -8,6 +8,7 @@ import TodoBox from './Table/TodoBox'
 import TodoItemForm from './Table/TodoItemForm'
 
 class Main extends Component {
+    _isMounted = false
     constructor(props) {
         super(props)
         this.state = {
@@ -19,11 +20,18 @@ class Main extends Component {
     }
 
     componentDidMount() {
+        this._isMounted = true
         axios.get(`/api/v1/todo_lists/${this.state.todo_list_id}/todo_items.json`)
             .then(response => {
-                this.setState({ todo_items: response.data });
+                if (this._isMounted) {
+                    this.setState({ todo_items: response.data });
+                }
             })
             .catch(error => console.log(error.response.data))
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     addNewTodoItem = () => {
@@ -58,7 +66,6 @@ class Main extends Component {
     }
 
     render() {
-        window.location.reload();
         return (
             <ul className="new-todo">
                 <li>

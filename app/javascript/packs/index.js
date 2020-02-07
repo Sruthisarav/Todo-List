@@ -8,9 +8,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Home from '../components/Todo List/Index/Home'
 import 'font-awesome/css/font-awesome.min.css'
 
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
+ReactDOM.render(
     <Home />,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+    document.getElementById('index'))

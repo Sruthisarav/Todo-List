@@ -6,7 +6,7 @@ import TodoBox from './Table/TodoBox'
 import TodoListForm from './Table/TodoListForm'
 
 class Home extends Component {
-    baseURL = () => process.env.baseURL || "http://localhost:3001";
+    _isMounted = false
     constructor(props) {
         super(props)
         this.state = {
@@ -17,11 +17,18 @@ class Home extends Component {
     }
 
     componentDidMount() {
+        this._isMounted = true;
         axios.get(`/api/v1/todo_lists.json`)
             .then(response => {
-                this.setState({ todo_lists: response.data });
+                if (this._isMounted) {
+                    this.setState({ todo_lists: response.data});
+                }
             })
-            .catch(error => console.log(error.response))
+            .catch(error => console.log(error.response));
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     addNewTodoList = () => {
@@ -32,7 +39,7 @@ class Home extends Component {
                     { $splice: [[0, 0, response.data]] })
                 this.setState({ todo_lists: todo_lists, editingTodoListId: response.data.id })
             })
-            .catch(error => console.log(error.response.data))
+            .catch(error => console.log(error.response))
     }
 
     updateTodoList = (todo_list) => {
@@ -56,7 +63,6 @@ class Home extends Component {
     }
 
     render() {
-        window.location.reload();
         return (
             <div>
                 <div>
