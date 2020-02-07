@@ -20,7 +20,6 @@ class Home extends Component {
         axios.get(`/api/v1/todo_lists.json`)
             .then(response => {
                 this.setState({ todo_lists: response.data });
-                window.location.reload();
             })
             .catch(error => console.log(error.response))
     }
@@ -57,6 +56,7 @@ class Home extends Component {
     }
 
     render() {
+        window.location.reload();
         return (
             <div>
                 <div>

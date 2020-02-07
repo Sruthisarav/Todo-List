@@ -10,7 +10,6 @@ import TodoItemForm from './Table/TodoItemForm'
 class Main extends Component {
     constructor(props) {
         super(props)
-        window.location.reload();
         this.state = {
             todo_list_id: this.props.todo_list_id,
             todo_items: [],
@@ -59,6 +58,7 @@ class Main extends Component {
     }
 
     render() {
+        window.location.reload();
         return (
             <ul className="new-todo">
                 <li>
