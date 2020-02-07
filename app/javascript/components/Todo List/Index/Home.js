@@ -59,8 +59,9 @@ class Home extends Component {
         return (
             <div>
                 <div>
-                    <button className="newTodoListButton" onClick={this.addNewTodoList} >
-                        New Todo List
+                    <button type="button" onClick={this.addNewTodoList} 
+                        className="newTodoListButton btn-outline-primary btn-rounded waves-effect btn cta-btn">
+                        <i className="fa fa-plus-circle"></i>
                     </button>
                 </div>
                 {this.state.todo_lists.map((todo_list) => {
