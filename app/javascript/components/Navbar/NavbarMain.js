@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 
 import Sidebar from './Sidebar/Sidebar'
 import Backdrop from './Backdrop/Backdrop'
-import Search from '../Search/Main.js'
 
 class NavbarMain extends Component {
     state = {
@@ -26,7 +25,6 @@ class NavbarMain extends Component {
         }
         return (
             <div style={{ height: '100%' }}>
-                <Search />
                 <Navbar barClickHandler={this.sideBarClickHandler}/>
                 <Sidebar show={this.state.sideBarOpen} />
                 {backdrop}

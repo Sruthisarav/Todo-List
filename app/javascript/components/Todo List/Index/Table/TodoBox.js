@@ -13,8 +13,7 @@ class TodoBox extends Component {
                                 <Image />
                             </div>
                             <TodoList todo_list={this.props.todo_list}
-                                key={this.props.todo_list.id} onClick={this.props.onClick}
-                                onDelete={this.props.onDelete} />
+                                key={this.props.todo_list.id} onDelete={this.props.onDelete} />
                         </div>
                     </div>
                 </div>

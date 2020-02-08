@@ -1,4 +1,9 @@
-button {
-    float: right;
-    margin-right: 10%;
+.newTodoListButton {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.todo-lists {
+    margin-top: 3%;
 }

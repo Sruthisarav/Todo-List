@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import './Main.css'
 
 class Main extends Component {
     constructor(props) {
@@ -23,10 +23,13 @@ class Main extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} >
-                <input type="text" name="tag_search" />
-                <button>Search</button>
-            </form >
+            <div className="container">
+                <form onSubmit={this.handleSubmit} >
+                    <input type="text" placeholder="Tag Search" name="tag_search" />
+                    <input type="submit" hidden />
+                    <div className="search"></div>
+                </form >
+            </div>
         );
     }
 }

@@ -1,6 +1,11 @@
-<h1>Editing Todo List</h1>
+<div id="form"></div>
+<%= content_tag :div,
+    id: "todo-list_data",
+    data: @todo_list.to_json do %>
+<% end %>
+<%= javascript_pack_tag 'editList'%>
 
-<%= render 'form', todo_list: @todo_list %>
+<h1>Editing Todo List</h1>
 
 <%= link_to 'Show', @todo_list %> |
 <%= link_to 'Back', todo_lists_path %>
