@@ -6,31 +6,3 @@
 <% end %>
 
 <%= javascript_pack_tag 'show'%>
-
-<h1><%= @todo_list.title %></h1>
-
-<h3><%= @todo_list.description %></h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Completed</th>
-      <th>Description</th>
-      <th>Delete</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <div id= "todo_items_wrap">
-      <%= render @todo_list.todo_items %>
-    </div>
-  </tbody>
-</table>
-
-<div id="form">
-  <%= render "todo_items/new" %>
-</div>
-
-
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>

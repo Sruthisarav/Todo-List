@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
 import Item from './Item'
+import './Item.css'
 
 class TodoItem extends Component {
 
     render() {
         return (
-            <ul>
+            <ul className="tag-search-list">
                 {this.props.todo_items.map((todo_item) => {
                     return (
                         <li>

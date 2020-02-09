@@ -17,6 +17,7 @@ class NewTodoList extends Component {
         axios.post('/api/v1/todo_lists', {todo_list})
             .then(response => {
                 this.setState({ new: false })
+                window.location.replace('/todo_lists');
             })
             .catch(error => console.log(error.response))
     }
@@ -32,6 +33,7 @@ class NewTodoList extends Component {
         )
             .then(response => {
                 console.log(response)
+                window.location.replace('/todo_lists');
             })
             .catch(error => console.log(error.response.data))
     }
@@ -46,7 +48,7 @@ class NewTodoList extends Component {
     }
     render() {
         return (
-            <div class="form-style">
+            <div className="form-style">
                 <h1>New Todo List</h1>
                 <form onSubmit={this.handleSubmit} >
                     <input type="text" name="title" value={this.state.title}

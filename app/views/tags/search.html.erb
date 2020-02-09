@@ -1,9 +1,11 @@
+<div id="tag"></div>
+
 <% if (@tag == nil) %>
     <%= javascript_pack_tag 'invalid_search'%>
 <% else %>
-    <%= javascript_pack_tag 'tag'%>
     <%= content_tag :div,
         id: "tag_data",
         data: @tag.to_json do %>
     <% end %>
+    <%= javascript_pack_tag 'tag'%>
 <% end %>

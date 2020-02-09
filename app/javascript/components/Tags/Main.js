@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import './Main.css'
+
 import TodoItem from './TodoItem'
 
 class Main extends Component {
@@ -17,13 +19,13 @@ class Main extends Component {
             .then(response => {
                 this.setState({ todo_items: response.data })
             })
-            .catch(error => console.log(error.response.data))
+            .catch(error => console.log(error.response))
     }
 
     render() {
         return (
             <div>
-                <h1>Todo items tagged with: {this.state.tag.name}</h1>
+                <h1 className="search-title">Todo items tagged with: {this.state.tag.name}</h1>
                 <TodoItem todo_items={this.state.todo_items} />
             </div>
         );

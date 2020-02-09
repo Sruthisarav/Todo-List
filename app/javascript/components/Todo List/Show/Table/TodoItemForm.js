@@ -7,7 +7,17 @@ class TodoItemForm extends Component {
         super(props)
         this.state = {
             content: this.props.todo_item.content,
-            list_of_tags: this.props.todo_item.list_of_tags
+            list_of_tags: ""
+        }
+        this.add_tags();
+    }
+
+    add_tags = () => {
+        this.props.todo_item.list_of_tags.map((tag) => {
+            this.state.list_of_tags += `${tag.name}, `
+        })
+        if (this.state.list_of_tags.length > 0) {
+            this.state.list_of_tags.slice(0,-1);
         }
     }
 
@@ -30,15 +40,17 @@ class TodoItemForm extends Component {
 
     render() {
         return (
-            <div className="tile">
-                <form onBlur={this.handleBlur} className="list" >
-                    <input className='input' type="text" name="content" placeholder='Enter a Task'
-                        value={this.state.content || ""} onChange={this.handleInput}
-                        ref={this.props.titleRef} />
-                    <input className='input' type="text" name="list_of_tags" placeholder='Enter tags'
-                        value={this.state.list_of_tags} onChange={this.handleInput} />
-                    <button onClick={this.handleInput}>Enter</button>
-                </form>
+            <div className="form-container">
+                <div className="todo_items-form">
+                    <form onBlur={this.handleBlur} className="form-list">
+                        <input className='input' type="text" name="content" placeholder='Enter a Task'
+                            value={this.state.content || ""} onChange={this.handleInput}
+                            ref={this.props.titleRef} />
+                        <input className='input' type="text" name="list_of_tags" placeholder='Enter tags'
+                            value={this.state.list_of_tags} onChange={this.handleInput} />
+                        <button onClick={this.handleInput}>Enter</button>
+                    </form>
+                </div>
             </div>
         );
     }

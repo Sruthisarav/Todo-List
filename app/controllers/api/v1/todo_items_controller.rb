@@ -9,10 +9,11 @@ module Api::V1
         item[:list_of_tags] = todo_item.tags
         item[:id] = todo_item.id
         item[:content] = todo_item.content
-        item[:completed] = todo_item.completed?
+        item[:complete] = todo_item.completed?
         item[:todo_list_id] = todo_item.todo_list_id
         item[:created_at] = todo_item.created_at
         item[:updated_at] = todo_item.updated_at
+        item[:completed_at] = todo_item.completed_at
         @todo_items << item
       end
       render json: @todo_items
@@ -55,7 +56,7 @@ module Api::V1
   
     private
       def todo_item_params
-        params[:todo_item].permit(:content, :list_of_tags)
+        params[:todo_item].permit(:content, :list_of_tags, :complete)
       end
       def make_todo_item(id)
         @todo_item = @todo_list.todo_items.find(id)

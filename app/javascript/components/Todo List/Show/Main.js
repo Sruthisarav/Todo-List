@@ -12,7 +12,7 @@ class Main extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            todo_list_id: this.props.todo_list_id,
+            todo_list_id: this.props.todo_list.id,
             todo_items: [],
             editingTodoItemId: null,
             transitionIn: false
@@ -67,13 +67,19 @@ class Main extends Component {
 
     render() {
         return (
-            <ul className="new-todo">
-                <li>
-                    <form id="todo-form">
-                        <button onClick={this.addNewTodoItem}>Add Task</button>
-                    </form>
-                </li>
-                <li>
+            <div className="todo-container">
+                <div className="header">
+                    <h1 className="title">{this.props.todo_list.title}</h1>
+                    <p className="description">{this.props.todo_list.description}</p>
+                </div>
+                <div className="box" onClick={this.addNewTodoItem}>
+                    <div className="btn add-btn">
+                        <p className="icon">
+                            Add task <i className="fa fa-plus"></i>
+                        </p>
+                    </div>
+                </div>
+                <div className="items">
                     {this.state.todo_items.map((todo_item) => {
                         if (this.state.editingTodoItemId === todo_item.id) {
                             return (<TodoItemForm todo_item={todo_item} key={todo_item.id} updateTodoItem={this.updateTodoItem}
@@ -83,8 +89,8 @@ class Main extends Component {
                                 onDelete={this.deleteTodoItem} update={this.updateTodoItem} />)
                         }
                     })}
-                </li>
-            </ul>
+                </div>
+            </div>
         );
     }
 }
