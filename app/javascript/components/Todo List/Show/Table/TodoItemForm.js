@@ -13,11 +13,13 @@ class TodoItemForm extends Component {
     }
 
     add_tags = () => {
-        this.props.todo_item.list_of_tags.map((tag) => {
-            this.state.list_of_tags += `${tag.name}, `
-        })
-        if (this.state.list_of_tags.length > 0) {
-            this.state.list_of_tags.slice(0,-1);
+        if (this.props.todo_item.list_of_tags !== undefined) {
+            this.props.todo_item.list_of_tags.map((tag) => {
+                this.state.list_of_tags += `${tag.name}, `
+            })
+            if (this.state.list_of_tags.length > 0) {
+                this.state.list_of_tags.slice(0, -1);
+            }
         }
     }
 
