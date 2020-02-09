@@ -56,7 +56,7 @@ module Api::V1
   
     private
       def todo_item_params
-        params[:todo_item].permit(:content, :list_of_tags, :complete)
+        params[:todo_item].permit(:content, :list_of_tags, :completed_at)
       end
       def make_todo_item(id)
         @todo_item = @todo_list.todo_items.find(id)

@@ -36,11 +36,12 @@ class Main extends Component {
 
     addNewTodoItem = () => {
         axios.post(`/api/v1/todo_lists/${this.state.todo_list_id}/todo_items`,
-            { todo_item: { content: '', list_of_tags: '' } })
+            { todo_item: { content: '', list_of_tags: [] } })
             .then(response => {
+                console.log(response.data)
                 const todo_items = update(this.state.todo_items,
                     { $splice: [[0, 0, response.data]] })
-                this.setState({ todo_items: todo_items, editingTodoItemId: response.data.id })
+                this.setState({ todo_items: todo_items, editingTodoItemId: null })
             })
             .catch(error => console.log(error.response.data))
     }

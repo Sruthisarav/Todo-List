@@ -46,6 +46,6 @@ class TodoItemsController < ApplicationController
       @todo_item = @todo_list.todo_items.find(params[:id])
     end
     def todo_item_params
-      params[:todo_item].permit(:content, :list_of_tags)
+      params[:todo_item].permit(:content, :list_of_tags, :completed_at)
     end
 end

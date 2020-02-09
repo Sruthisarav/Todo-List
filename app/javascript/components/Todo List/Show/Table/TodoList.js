@@ -7,6 +7,7 @@ class TodoList extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            todo_item: this.props.todo_item,
             completed: this.props.todo_item.completed_at
         }
         this.handleChange = this.handleChange.bind(this);
@@ -18,24 +19,25 @@ class TodoList extends Component {
 
     handleBlur = (time) => {
         const todo_item = { completed_at: time }
-        axios.patch(
+        axios.put(
             `/api/v1/todo_lists/${this.props.todo_item.todo_list_id}/todo_items/${this.props.todo_item.id}`,
             { todo_item: todo_item }
         )
             .then(response => {
-                console.log(response)
+                console.log(response.data)
+                this.setState({ todo_item:todo_item, completed: todo_item.completed_at });
+                this.props.update(this.response.data);
             })
             .catch(error => console.log(error.response))
     }
 
     handleChange = (e) => {
-        this.state.completed = event.target.checked
+        this.state.completed = e.target.checked
         if (this.state.completed) {
             this.handleBlur(new Date()); 
         } else {
             this.handleBlur(null);
         }
-        this.props.update(this.props.todo_item)
     }
 
     check_box = () => {
@@ -48,11 +50,19 @@ class TodoList extends Component {
     }
 
     items = () => {
-        return (
-            <ul className="tag">
-                <Tag tags={this.props.todo_item.list_of_tags} />
-            </ul>
-        )
+        if (this.state.todo_item.list_of_tags === undefined) {
+            return (
+                <ul className="tag">
+                    <Tag tags={this.props.todo_item.list_of_tags} />
+                </ul>
+            )
+        } else {
+            return (
+                <ul className="tag">
+                    <Tag tags={this.state.todo_item.list_of_tags} />
+                </ul>
+            )
+        }
     }
 
     content = () => {
@@ -71,7 +81,7 @@ class TodoList extends Component {
                                 <input type="checkbox" className="box check-box" onChange={this.handleChange} checked />
                                 <label><div></div></label>
                             </div>
-                            <p onClick={this.handleClick} className="item completed" >
+                            <p className="item completed" >
                                 <this.content />
                             </p>
                             <this.items />
