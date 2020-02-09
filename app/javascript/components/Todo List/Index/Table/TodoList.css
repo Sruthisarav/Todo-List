@@ -2,6 +2,11 @@
 
 .container p,h4 {
     font-family: 'Roboto', sans-serif;
+    color: rgb(106,90,205);
+}
+
+.container p {
+    font-size: 30px;
 }
 
 .spacing {

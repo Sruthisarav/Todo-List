@@ -10,7 +10,7 @@ class TodoList extends Component {
         return (
             <div className="col-md-8 container">
                 <div className="pt-4 pb-4">
-                    <h4>{this.props.todo_list.title}</h4>
+                    <h2>{this.props.todo_list.title}</h2>
                     <p>{this.props.todo_list.description}</p>
                     <div className="cta-wrapper">
                         <a href={"/todo_lists/" + this.props.todo_list.id} className="spacing">

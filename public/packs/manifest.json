@@ -1,15 +1,15 @@
 {
-  "application.js": "/packs/js/application-18b3e51bf06bad1553f4.js",
-  "application.js.map": "/packs/js/application-18b3e51bf06bad1553f4.js.map",
+  "application.js": "/packs/js/application-ff70debb8e9aa7c55c73.js",
+  "application.js.map": "/packs/js/application-ff70debb8e9aa7c55c73.js.map",
   "editList.js": "/packs/js/editList-0f49c94115b7630315e5.js",
   "editList.js.map": "/packs/js/editList-0f49c94115b7630315e5.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-18b3e51bf06bad1553f4.js"
+        "/packs/js/application-ff70debb8e9aa7c55c73.js"
       ],
       "js.map": [
-        "/packs/js/application-18b3e51bf06bad1553f4.js.map"
+        "/packs/js/application-ff70debb8e9aa7c55c73.js.map"
       ]
     },
     "editList": {
@@ -22,10 +22,10 @@
     },
     "index": {
       "js": [
-        "/packs/js/index-cda997e0ed9a3b79d877.js"
+        "/packs/js/index-f3d257d0fcf722db0737.js"
       ],
       "js.map": [
-        "/packs/js/index-cda997e0ed9a3b79d877.js.map"
+        "/packs/js/index-f3d257d0fcf722db0737.js.map"
       ]
     },
     "invalid_search": {
@@ -62,10 +62,10 @@
     },
     "server_rendering": {
       "js": [
-        "/packs/js/server_rendering-25753ac9674643a7a32f.js"
+        "/packs/js/server_rendering-be028aa08ff1083bcaec.js"
       ],
       "js.map": [
-        "/packs/js/server_rendering-25753ac9674643a7a32f.js.map"
+        "/packs/js/server_rendering-be028aa08ff1083bcaec.js.map"
       ]
     },
     "show": {
@@ -85,8 +85,8 @@
       ]
     }
   },
-  "index.js": "/packs/js/index-cda997e0ed9a3b79d877.js",
-  "index.js.map": "/packs/js/index-cda997e0ed9a3b79d877.js.map",
+  "index.js": "/packs/js/index-f3d257d0fcf722db0737.js",
+  "index.js.map": "/packs/js/index-f3d257d0fcf722db0737.js.map",
   "invalid_search.js": "/packs/js/invalid_search-c914b9bd0377ce21ef10.js",
   "invalid_search.js.map": "/packs/js/invalid_search-c914b9bd0377ce21ef10.js.map",
   "main.js": "/packs/js/main-1780a91b08fc88529f18.js",
@@ -101,8 +101,8 @@
   "newList.js.map": "/packs/js/newList-3d443150a6fbc4ad087e.js.map",
   "search.js": "/packs/js/search-c993634f2baee543b251.js",
   "search.js.map": "/packs/js/search-c993634f2baee543b251.js.map",
-  "server_rendering.js": "/packs/js/server_rendering-25753ac9674643a7a32f.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-25753ac9674643a7a32f.js.map",
+  "server_rendering.js": "/packs/js/server_rendering-be028aa08ff1083bcaec.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-be028aa08ff1083bcaec.js.map",
   "show.js": "/packs/js/show-0e97285330c877b6a62f.js",
   "show.js.map": "/packs/js/show-0e97285330c877b6a62f.js.map",
   "tag.js": "/packs/js/tag-72ef4b66814325b67e3c.js",
