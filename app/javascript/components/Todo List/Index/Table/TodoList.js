@@ -13,12 +13,12 @@ class TodoList extends Component {
                     <h4>{this.props.todo_list.title}</h4>
                     <p>{this.props.todo_list.description}</p>
                     <div className="cta-wrapper">
-                        <a href={"/todo_lists/" + this.props.todo_list.id}>
+                        <a href={"/todo_lists/" + this.props.todo_list.id} className="spacing">
                             <button type="button" className="todo-btn btn-outline-primary btn-rounded waves-effect btn cta-btn">
                                 View <i className="fa fa-eye"></i>
                             </button>
                         </a>
-                        <a href={"/todo_lists/" + this.props.todo_list.id + "/edit"}>
+                        <a href={"/todo_lists/" + this.props.todo_list.id + "/edit"} className="spacing">
                             <button type="button" className="todo-btn btn-outline-primary btn-rounded waves-effect btn cta-btn">
                                 Edit <i className="fa fa-pencil"></i>
                             </button>
