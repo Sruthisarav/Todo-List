@@ -1,68 +1,68 @@
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC&display=swap);
 
 .space {
-    margin-top: 1%;
+  margin-top: 1%;
 }
 
 
 .todo_items {
-    margin: auto;
-    width: 50%;
-    height: 50px;
-    border-radius: 5px;
-    color: white;
-    background-color:rgb(65,105,225);
+  margin: auto;
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  color: white;
+  background-color:rgb(65,105,225);
 }
 
 .completed-container {
-    margin: auto;
-    width: 50%;
-    height: 50px;
-    border-radius: 5px;
-    color: rgb(135,206,250); 
-    text-decoration: line-through;
-    background-color:rgb(123,104,238);
+  margin: auto;
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  color: rgb(135,206,250); 
+  text-decoration: line-through;
+  background-color:rgb(123,104,238);
 }
 
 
 .todo_items:hover {
-    box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 .list {
-    position: relative;
+  position: relative;
 }
 
 .list .fa-trash {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-    top: 0;
-    margin-top: 2%;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  top: 0;
+  margin-top: 2%;
 }
 
 .item {
-    position: absolute;
-    left: 10%;
-    top: 0;
-    font-family: 'Amatic SC', cursive;
-    font-size: 25px;
-    padding-top: 1%;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  padding-top: 1%;
 }
 
 .tag {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 8%;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 8%;
 }
 
 .fa-trash {
-    margin: 0 5px;
-    font-size: 15px;
+  margin: 0 5px;
+  font-size: 15px;
 }
 
 .completed {
-    text-decoration: line-through
+  text-decoration: line-through
 }
 
 .check-container {

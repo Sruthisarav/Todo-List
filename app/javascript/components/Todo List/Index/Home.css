@@ -1,9 +1,9 @@
 .newTodoListButton {
-    position: absolute;
-    top: 10%;
-    right: 10%;
+  position: absolute;
+  top: 10%;
+  right: 10%;
 }
 
 .todo-lists {
-    margin-top: 3%;
+  margin-top: 3%;
 }

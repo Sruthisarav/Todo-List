@@ -1,17 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC&display=swap);
 
 .invalid, .message{
-    color: rgb(25,25,112);
-    text-align: center;
+  color: rgb(25,25,112);
+  text-align: center;
 }
 
 .invalid {
-    margin-top: 5%;
-    font-family: 'Amatic SC', cursive;
-    font-size: 200px;
+  margin-top: 5%;
+  font-family: 'Amatic SC', cursive;
+  font-size: 200px;
 }
 
 .message {
-    font-size: 40px;
-    color: rgb(65,105,225);
+  font-size: 40px;
+  color: rgb(65,105,225);
 }

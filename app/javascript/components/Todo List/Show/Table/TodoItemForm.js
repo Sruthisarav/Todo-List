@@ -28,7 +28,7 @@ class TodoItemForm extends Component {
     }
 
     handleBlur = () => {
-        const todo_item = { content: this.state.content, list_of_tags: this.state.list_of_tags}
+        const todo_item = { content: this.state.content, list_of_tags: this.state.list_of_tags }
         axios.put(
             `/api/v1/todo_lists/${this.props.todo_item.todo_list_id}/todo_items/${this.props.todo_item.id}`,
             { todo_item: todo_item }

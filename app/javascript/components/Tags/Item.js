@@ -5,7 +5,6 @@ import './Item.css'
 
 
 class Item extends Component {
-
     content = () => {
         return this.props.todo_item.content == ""
             ? "New Task"

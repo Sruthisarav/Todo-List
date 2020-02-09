@@ -4,7 +4,6 @@ import Item from './Item'
 import './Item.css'
 
 class TodoItem extends Component {
-
     render() {
         return (
             <ul className="tag-search-list">

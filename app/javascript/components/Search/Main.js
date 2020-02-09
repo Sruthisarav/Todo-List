@@ -17,8 +17,10 @@ class Main extends Component {
             }
             return data;
         }, {});
+
         this.state.search = data.tag_search;
         window.location.href = "/search?search=" + this.state.search
+
     };
 
     render() {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
 
+import Navbar from './Navbar';
 import Sidebar from './Sidebar/Sidebar'
 import Backdrop from './Backdrop/Backdrop'
 
@@ -8,6 +8,7 @@ class NavbarMain extends Component {
     state = {
         sideBarOpen: false
     };
+
     sideBarClickHandler = () => {
         this.setState((prevState) => {
             return { sideBarOpen: !prevState.sideBarOpen };
@@ -15,17 +16,19 @@ class NavbarMain extends Component {
     };
 
     backdropClickHandler = () => {
-        this.setState({sideBarOpen: false});
+        this.setState({ sideBarOpen: false });
     };
 
     render() {
         let backdrop;
+
         if (this.state.sideBarOpen) {
-            backdrop = <Backdrop click={this.backdropClickHandler}/>;
+            backdrop = <Backdrop click={this.backdropClickHandler} />;
         }
+
         return (
             <div style={{ height: '100%' }}>
-                <Navbar barClickHandler={this.sideBarClickHandler}/>
+                <Navbar barClickHandler={this.sideBarClickHandler} />
                 <Sidebar show={this.state.sideBarOpen} />
                 {backdrop}
             </div>

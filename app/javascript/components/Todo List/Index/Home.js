@@ -21,7 +21,7 @@ class Home extends Component {
         axios.get(`/api/v1/todo_lists.json`)
             .then(response => {
                 if (this._isMounted) {
-                    this.setState({ todo_lists: response.data});
+                    this.setState({ todo_lists: response.data });
                 }
             })
             .catch(error => console.log(error.response));
@@ -52,15 +52,15 @@ class Home extends Component {
             <div>
                 <div>
                     <a href="/todo_lists/new">
-                        <button type="button" 
-                        className="newTodoListButton btn-outline-primary btn-rounded waves-effect btn cta-btn">
-                        New List <i className="fa fa-plus-circle"></i></button> 
+                        <button type="button"
+                            className="newTodoListButton btn-outline-primary btn-rounded waves-effect btn cta-btn">
+                            New List <i className="fa fa-plus-circle"></i></button>
                     </a>
                 </div>
-                <div className = "todo-lists">
+                <div className="todo-lists">
                     {this.state.todo_lists.map((todo_list) => {
                         return (<TodoBox todo_list={todo_list} key={todo_list.id}
-                                onDelete={this.deleteTodoList} />)
+                            onDelete={this.deleteTodoList} />)
                     })}
                 </div>
             </div>

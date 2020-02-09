@@ -1,23 +1,23 @@
 a.tag-link {
-    text-decoration: none;
-    float: left;
-    margin-left: 2%
+  text-decoration: none;
+  float: left;
+  margin-left: 2%
 }
 a.tag-link:link, a.tag-link:visited {
-    color: white;
+  color: white;
 }
 a.tag-link:hover {
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .tags {
-    font-size: 10px;
-    color: white;
-    margin-top: -10px;
+  font-size: 10px;
+  color: white;
+  margin-top: -10px;
 }
 
 li .tags {
-    float: left;
+  float: left;
 }

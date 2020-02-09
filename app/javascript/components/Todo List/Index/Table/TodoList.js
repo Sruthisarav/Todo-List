@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import './TodoList.css'
 
 class TodoList extends Component {
-
     handleDelete = () => { this.props.onDelete(this.props.todo_list.id) }
 
     render() {
@@ -23,7 +22,7 @@ class TodoList extends Component {
                                 Edit <i className="fa fa-pencil"></i>
                             </button>
                         </a>
-                        <button type="button" 
+                        <button type="button"
                             className="todo-btn btn-outline-primary btn-rounded waves-effect btn cta-btn"
                             onClick={this.handleDelete}>
                             Delete <i className="fa fa-trash"></i>

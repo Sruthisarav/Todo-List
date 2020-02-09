@@ -14,13 +14,14 @@ class NewTodoList extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     addNewTodoList = (todo_list) => {
-        axios.post('/api/v1/todo_lists', {todo_list})
+        axios.post('/api/v1/todo_lists', { todo_list })
             .then(response => {
                 this.setState({ new: false })
                 window.location.replace('/todo_lists');
             })
             .catch(error => console.log(error.response))
     }
+
     handleInput = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     }
@@ -46,6 +47,7 @@ class NewTodoList extends Component {
             this.handleBlur();
         }
     }
+
     render() {
         return (
             <div className="form-style">

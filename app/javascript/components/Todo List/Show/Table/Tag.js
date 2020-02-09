@@ -9,16 +9,15 @@ class Tag extends Component {
             return (
                 <div className="tags">
                     {this.props.tags.map((tag) => {
-                    const name = " " + tag.name
+                        const name = " " + tag.name
                         return (
                             <li>
-                            <a className="tag-link" href={"/tags/" + tag.id} key={tag.id}>
-                                {name}
-                            </a>
-                        </li>
+                                <a className="tag-link" href={"/tags/" + tag.id} key={tag.id}>
+                                    {name}
+                                </a>
+                            </li>
                         );
-                        })
-                    }
+                    })}
                 </div>
             )
         }

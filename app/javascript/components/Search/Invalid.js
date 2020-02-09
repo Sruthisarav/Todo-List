@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import './Invalid.css'
 
 class Invalid extends Component {
-
     render() {
         return (
             <div className="text-font" >

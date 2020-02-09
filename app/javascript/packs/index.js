@@ -10,4 +10,5 @@ import 'font-awesome/css/font-awesome.min.css'
 
 ReactDOM.render(
     <Home />,
-    document.getElementById('index'))
+    document.getElementById('index')
+)

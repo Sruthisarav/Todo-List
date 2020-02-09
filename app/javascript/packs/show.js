@@ -6,6 +6,8 @@ import Main from '../components/Todo List/Show/Main'
 
 const node = document.getElementById('todo-list_data');
 const todo_list = JSON.parse(node.getAttribute('data'));
+
 ReactDOM.render(
     <Main todo_list={todo_list} />,
-    document.getElementById('show'))
+    document.getElementById('show')
+)

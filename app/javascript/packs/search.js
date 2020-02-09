@@ -6,4 +6,5 @@ import Main from '../components/Search/Main'
 
 ReactDOM.render(
     <Main />,
-    document.getElementById('search_tag'))
+    document.getElementById('search_tag')
+)

@@ -25,7 +25,7 @@ class TodoList extends Component {
         )
             .then(response => {
                 console.log(response.data)
-                this.setState({ todo_item:todo_item, completed: todo_item.completed_at });
+                this.setState({ todo_item: todo_item, completed: todo_item.completed_at });
                 this.props.update(this.response.data);
             })
             .catch(error => console.log(error.response))
@@ -34,7 +34,7 @@ class TodoList extends Component {
     handleChange = (e) => {
         this.state.completed = e.target.checked
         if (this.state.completed) {
-            this.handleBlur(new Date()); 
+            this.handleBlur(new Date());
         } else {
             this.handleBlur(null);
         }
@@ -107,7 +107,6 @@ class TodoList extends Component {
             )
         }
     }
-
 
     render() {
         return (

@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 .container p,h4 {
-    font-family: 'Roboto', sans-serif;
-    color: rgb(106,90,205);
+  font-family: 'Roboto', sans-serif;
+  color: rgb(106,90,205);
 }
 
 .container p {
-    font-size: 30px;
+  font-size: 15px;
 }
 
 .spacing {
-    margin-right: 2%;
+  margin-right: 2%;
 }

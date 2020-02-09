@@ -5,5 +5,6 @@ import 'font-awesome/css/font-awesome.min.css'
 import Invalid from '../components/Search/Invalid'
 
 ReactDOM.render(
-        <Invalid />,
-        document.getElementById('tag'))
+    <Invalid />,
+    document.getElementById('tag')
+)

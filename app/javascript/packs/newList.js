@@ -8,4 +8,5 @@ const todo_list = { title:'', description:'' };
 
 ReactDOM.render(
     <NewTodoList new={true} todo_list={todo_list} />,
-    document.getElementById('form'))
+    document.getElementById('form')
+)
